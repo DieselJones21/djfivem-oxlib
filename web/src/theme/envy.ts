@@ -44,6 +44,18 @@ export const envy = {
     'linear-gradient(180deg, #F7FAFC 0%, #C5CDD6 42%, #8A949E 58%, #E8EEF4 100%)',
 };
 
+export const envyDropdown = {
+  background: envy.bgRaised,
+  border: envy.border,
+  boxShadow: envy.panelShadow,
+};
+
+export const envyLabel = {
+  color: envy.chromeMid,
+  fontWeight: 600,
+  letterSpacing: '0.04em' as const,
+};
+
 export const envyPanel = {
   background: envy.bg,
   border: envy.border,

@@ -2,6 +2,7 @@ import { Box, Slider, Text } from '@mantine/core';
 import { ISlider } from '../../../../typings/dialog';
 import { Control, useController } from 'react-hook-form';
 import { FormValues } from '../../InputDialog';
+import { envy } from '../../../../theme/envy';
 
 interface Props {
   row: ISlider;
@@ -18,9 +19,10 @@ const SliderField: React.FC<Props> = (props) => {
 
   return (
     <Box>
-      <Text sx={{ fontSize: 14, fontWeight: 500 }}>{props.row.label}</Text>
+      <Text sx={{ fontSize: 14, fontWeight: 600, color: envy.chromeMid, letterSpacing: '0.04em' }}>{props.row.label}</Text>
       <Slider
         mb={10}
+        color="envy"
         value={controller.field.value}
         name={controller.field.name}
         ref={controller.field.ref}

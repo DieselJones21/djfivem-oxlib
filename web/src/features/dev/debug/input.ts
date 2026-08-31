@@ -55,6 +55,23 @@ export const debugInput = () => {
             max: 50,
             step: 2,
           },
+          {
+            type: 'color',
+            label: 'Accent colour',
+            default: '#00E5FF',
+          },
+          {
+            type: 'date',
+            label: 'Lock date',
+            description: 'When this locker expires',
+          },
+          {
+            type: 'textarea',
+            label: 'Notes',
+            placeholder: 'Leave a street note',
+            min: 2,
+            max: 4,
+          },
         ],
       },
     },
