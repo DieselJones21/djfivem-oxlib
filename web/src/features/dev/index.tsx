@@ -32,7 +32,14 @@ const Dev: React.FC = () => {
         </ActionIcon>
       </Tooltip>
 
-      <Drawer position="left" onClose={() => setOpened(false)} opened={opened} title="Developer drawer" padding="xl">
+      <Drawer
+        position="left"
+        onClose={() => setOpened(false)}
+        opened={opened}
+        title="Envy preview"
+        padding="xl"
+        overlayOpacity={0.55}
+      >
         <Stack>
           <Divider />
           <Button fullWidth onClick={() => debugEnvyShowcase()}>

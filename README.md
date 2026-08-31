@@ -26,11 +26,18 @@ setr ox:primaryShade 5
 
 ## What changed in the UI
 
-- Selection menu: branded header, item count badge, cyan icon wells, chrome item cards
-- Context menu: kicker + title + item pill, glowing close button, described action rows
-- Notifications and TextUI: compact glass cards with cyan icons
-- Progress bar: label and percent above a neon fill
-- Radial, skill check, and dialogs: same cyan/chrome language
+Every ox_lib NUI surface is restyled:
+
+- Selection menu
+- Context menu
+- Notifications
+- TextUI
+- Linear progress bar
+- Circle progress bar
+- Skill check
+- Radial menu
+- Alert dialog
+- Input dialog, including text, password, number, checkbox, select, slider, colour, date, time, and textarea fields
 
 ## Rebuild the UI
 
@@ -44,7 +51,7 @@ pnpm start -- --open # then add ?showcase=1 for a layered demo
 pnpm build          # writes web/build for in-game use
 ```
 
-Open `http://localhost:3000/?showcase=1` to preview the selection menu, context menu, notification, TextUI, and progress bar together.
+Open `http://localhost:3000/?showcase=1` for menus, notifications, TextUI, and the linear progress bar. Use the wrench drawer to preview the circle progress, skill check, radial menu, and input/alert dialogs.
 
 ## License
 
