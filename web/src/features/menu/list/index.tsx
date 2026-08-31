@@ -218,7 +218,13 @@ const ListMenu: React.FC = () => {
           <Box className={classes.container}>
             <Header title={menu.title} current={selected + 1} total={menu.items.length} />
             <Box className={classes.buttonsWrapper} onKeyDown={(e: React.KeyboardEvent<HTMLDivElement>) => moveMenu(e)}>
-              <FocusTrap active={visible}>
+              <FocusTrap
+                active={visible}
+                focusTrapOptions={{
+                  allowOutsideClick: true,
+                  clickOutsideDeactivates: false,
+                }}
+              >
                 <Stack spacing={8} p={8} sx={{ overflowY: 'scroll' }}>
                   {menu.items.map((item, index) => (
                     <React.Fragment key={`menu-item-${index}`}>

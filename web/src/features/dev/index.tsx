@@ -23,7 +23,7 @@ const Dev: React.FC = () => {
           radius="xl"
           variant="filled"
           color="envy"
-          sx={{ position: 'absolute', bottom: 0, right: 0, width: 50, height: 50 }}
+          sx={{ position: 'absolute', bottom: 0, right: 0, width: 50, height: 50, zIndex: 10000 }}
           size="xl"
           mr={50}
           mb={50}

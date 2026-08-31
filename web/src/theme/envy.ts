@@ -69,3 +69,33 @@ export const envyKicker = {
   textTransform: 'uppercase' as const,
   textShadow: '0 0 12px rgba(0, 229, 255, 0.55)',
 };
+
+export const envyModalStyles = {
+  modal: {
+    background: envy.bgRaised,
+    border: envy.border,
+    borderRadius: envy.radius,
+    boxShadow: envy.panelShadow,
+    color: envy.text,
+    overflow: 'hidden',
+  },
+  header: {
+    background: envy.headerGradient,
+    borderBottom: '1px solid rgba(0, 229, 255, 0.28)',
+    marginBottom: 12,
+    padding: '14px 16px',
+  },
+  title: {
+    color: envy.text,
+    fontWeight: 800,
+    letterSpacing: '0.04em',
+    textTransform: 'uppercase' as const,
+    width: '100%',
+  },
+  overlay: {
+    background: 'rgba(0, 0, 0, 0.72)',
+  },
+  body: {
+    padding: '8px 16px 16px',
+  },
+};

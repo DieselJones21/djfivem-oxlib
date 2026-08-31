@@ -19,6 +19,7 @@ const useStyles = createStyles((_theme, params: { position?: TextUiPosition }) =
       params.position === 'top-center' ? 'baseline' : params.position === 'bottom-center' ? 'flex-end' : 'center',
     justifyContent:
       params.position === 'right-center' ? 'flex-end' : params.position === 'left-center' ? 'flex-start' : 'center',
+    pointerEvents: 'none',
   },
   container: {
     fontSize: 15,
@@ -31,6 +32,7 @@ const useStyles = createStyles((_theme, params: { position?: TextUiPosition }) =
     fontFamily: 'Roboto',
     boxShadow: envy.panelShadow,
     maxWidth: 420,
+    pointerEvents: 'auto',
   },
   iconWrap: {
     width: 32,

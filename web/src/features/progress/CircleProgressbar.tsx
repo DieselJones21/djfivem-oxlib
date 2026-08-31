@@ -21,6 +21,7 @@ const useStyles = createStyles((_theme, params: { position: 'middle' | 'bottom';
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
+    pointerEvents: 'none',
   },
   progress: {
     filter: 'drop-shadow(0 0 12px rgba(0, 229, 255, 0.45))',

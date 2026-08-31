@@ -16,6 +16,7 @@ import DateField from './components/fields/date';
 import TextareaField from './components/fields/textarea';
 import TimeField from './components/fields/time';
 import dayjs from 'dayjs';
+import { envyModalStyles } from '../../theme/envy';
 
 export type FormValues = {
   test: {
@@ -104,10 +105,14 @@ const InputDialog: React.FC = () => {
         closeOnEscape={fields.options?.allowCancel !== false}
         closeOnClickOutside={false}
         size={fields.options?.size || 'xs'}
-        styles={{ title: { textAlign: 'center', width: '100%', fontSize: 18 } }}
+        styles={{
+          ...envyModalStyles,
+          title: { ...envyModalStyles.title, textAlign: 'center', width: '100%', fontSize: 18 },
+        }}
         title={fields.heading}
         withCloseButton={false}
-        overlayOpacity={0.5}
+        overlayOpacity={0.65}
+        overlayColor="#000"
         transition="fade"
         exitTransitionDuration={150}
       >
@@ -161,7 +166,7 @@ const InputDialog: React.FC = () => {
               >
                 {locale.ui.cancel}
               </Button>
-              <Button uppercase variant="light" type="submit">
+              <Button uppercase variant="filled" color="envy" type="submit">
                 {locale.ui.confirm}
               </Button>
             </Group>

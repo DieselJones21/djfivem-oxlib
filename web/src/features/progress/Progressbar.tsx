@@ -16,6 +16,7 @@ const useStyles = createStyles(() => ({
     bottom: 0,
     position: 'absolute',
     paddingBottom: 28,
+    pointerEvents: 'none',
   },
   container: {
     width: 420,

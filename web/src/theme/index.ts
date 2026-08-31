@@ -16,21 +16,29 @@ export const theme: MantineThemeOverride = {
   },
   components: {
     Button: {
-      styles: {
+      styles: (_theme, params: { variant?: string }) => ({
         root: {
-          border: envy.border,
-          background: envy.item,
-          color: envy.text,
           fontWeight: 700,
           letterSpacing: '0.04em',
           transition: 'box-shadow 120ms ease, border-color 120ms ease, background 120ms ease',
-          '&:hover': {
-            background: envy.itemHover,
-            borderColor: envy.cyan,
-            boxShadow: envy.glow,
-          },
+          ...(params.variant === 'default'
+            ? {
+                border: envy.border,
+                background: envy.item,
+                color: envy.text,
+                '&:hover': {
+                  background: envy.itemHover,
+                  borderColor: envy.cyan,
+                  boxShadow: envy.glow,
+                },
+              }
+            : {
+                '&:hover': {
+                  boxShadow: envy.glow,
+                },
+              }),
         },
-      },
+      }),
     },
     Modal: {
       styles: {

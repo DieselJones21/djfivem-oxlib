@@ -1,4 +1,4 @@
-import { Button, createStyles, Group, Modal, Stack, useMantineTheme } from '@mantine/core';
+import { Button, createStyles, Group, Modal, Stack } from '@mantine/core';
 import { useState } from 'react';
 import ReactMarkdown from 'react-markdown';
 import { useNuiEvent } from '../../hooks/useNuiEvent';
@@ -7,7 +7,7 @@ import { useLocales } from '../../providers/LocaleProvider';
 import remarkGfm from 'remark-gfm';
 import type { AlertProps } from '../../typings';
 import MarkdownComponents from '../../config/MarkdownComponents';
-import { envy } from '../../theme/envy';
+import { envy, envyModalStyles } from '../../theme/envy';
 
 const useStyles = createStyles(() => ({
   contentStack: {
@@ -18,7 +18,6 @@ const useStyles = createStyles(() => ({
 const AlertDialog: React.FC = () => {
   const { locale } = useLocales();
   const { classes } = useStyles();
-  const theme = useMantineTheme();
   const [opened, setOpened] = useState(false);
   const [dialogData, setDialogData] = useState<AlertProps>({
     header: '',
@@ -52,9 +51,11 @@ const AlertDialog: React.FC = () => {
           closeAlert('cancel');
         }}
         withCloseButton={false}
-        overlayOpacity={0.5}
+        overlayOpacity={0.65}
+        overlayColor="#000"
         exitTransitionDuration={150}
         transition="fade"
+        styles={envyModalStyles}
         title={<ReactMarkdown components={MarkdownComponents}>{dialogData.header}</ReactMarkdown>}
       >
         <Stack className={classes.contentStack}>
@@ -75,8 +76,8 @@ const AlertDialog: React.FC = () => {
             )}
             <Button
               uppercase
-              variant={dialogData.cancel ? 'light' : 'default'}
-              color={dialogData.cancel ? theme.primaryColor : undefined}
+              variant="filled"
+              color="envy"
               onClick={() => closeAlert('confirm')}
             >
               {dialogData.labels?.confirm || locale.ui.confirm}
