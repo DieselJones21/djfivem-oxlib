@@ -2,9 +2,9 @@ import { useRef, useState } from 'react';
 import { useNuiEvent } from '../../hooks/useNuiEvent';
 import Indicator from './indicator';
 import { fetchNui } from '../../utils/fetchNui';
-import { Box, createStyles } from '@mantine/core';
+import { Box, createStyles, Text } from '@mantine/core';
 import type { GameDifficulty, SkillCheckProps } from '../../typings';
-import { envy } from '../../theme/envy';
+import { envy, envyKicker } from '../../theme/envy';
 
 export const circleCircumference = 2 * 50 * Math.PI;
 
@@ -16,7 +16,7 @@ const difficultyOffsets = {
   hard: 25,
 };
 
-const useStyles = createStyles((theme, params: { difficultyOffset: number }) => ({
+const useStyles = createStyles((_theme, params: { difficultyOffset: number }) => ({
   svg: {
     position: 'absolute',
     top: '50%',
@@ -25,11 +25,11 @@ const useStyles = createStyles((theme, params: { difficultyOffset: number }) => 
     r: 50,
     width: 500,
     height: 500,
-    filter: 'drop-shadow(0 0 16px rgba(0, 229, 255, 0.35))',
+    filter: 'drop-shadow(0 0 18px rgba(0, 229, 255, 0.4))',
   },
   track: {
     fill: 'transparent',
-    stroke: 'rgba(255, 255, 255, 0.14)',
+    stroke: 'rgba(197, 205, 214, 0.28)',
     strokeWidth: 8,
     r: 50,
     cx: 250,
@@ -43,13 +43,14 @@ const useStyles = createStyles((theme, params: { difficultyOffset: number }) => 
   },
   skillArea: {
     fill: 'transparent',
-    stroke: theme.fn.primaryColor() || envy.cyan,
+    stroke: envy.cyan,
     strokeWidth: 8,
     r: 50,
     cx: 250,
     cy: 250,
     strokeDasharray: circleCircumference,
     strokeDashoffset: circleCircumference - (Math.PI * 50 * params.difficultyOffset) / 180,
+    filter: 'drop-shadow(0 0 8px rgba(0, 229, 255, 0.9))',
     '@media (min-height: 1440px)': {
       strokeWidth: 10,
       r: 65,
@@ -58,7 +59,7 @@ const useStyles = createStyles((theme, params: { difficultyOffset: number }) => 
     },
   },
   indicator: {
-    stroke: 'red',
+    stroke: envy.chromeHi,
     strokeWidth: 16,
     fill: 'transparent',
     r: 50,
@@ -66,6 +67,7 @@ const useStyles = createStyles((theme, params: { difficultyOffset: number }) => 
     cy: 250,
     strokeDasharray: circleCircumference,
     strokeDashoffset: circleCircumference - 3,
+    filter: 'drop-shadow(0 0 6px rgba(255, 255, 255, 0.85))',
     '@media (min-height: 1440px)': {
       strokeWidth: 18,
       r: 65,
@@ -73,27 +75,39 @@ const useStyles = createStyles((theme, params: { difficultyOffset: number }) => 
       strokeDashoffset: 2 * 65 * Math.PI - 5,
     },
   },
-  button: {
+  hub: {
     position: 'absolute',
     left: '50%',
     top: '50%',
     transform: 'translate(-50%, -50%)',
-    backgroundColor: envy.bgRaised,
-    color: envy.cyan,
+    width: 54,
+    height: 54,
+    borderRadius: 12,
+    background: envy.bgRaised,
     border: `1px solid ${envy.cyan}`,
-    boxShadow: envy.glow,
-    width: 28,
-    height: 28,
-    textAlign: 'center',
-    borderRadius: 6,
-    fontSize: 16,
-    fontWeight: 800,
+    boxShadow: `${envy.glow}, ${envy.insetChrome}`,
     display: 'flex',
+    flexDirection: 'column',
     justifyContent: 'center',
     alignItems: 'center',
+    gap: 1,
     '@media (min-height: 1440px)': {
-      width: 32,
-      height: 32,
+      width: 62,
+      height: 62,
+    },
+  },
+  kicker: {
+    ...envyKicker,
+    fontSize: 7,
+    letterSpacing: '0.18em',
+  },
+  button: {
+    color: envy.cyan,
+    fontSize: 16,
+    fontWeight: 800,
+    lineHeight: 1,
+    textShadow: '0 0 10px rgba(0, 229, 255, 0.55)',
+    '@media (min-height: 1440px)': {
       fontSize: 22,
     },
   },
@@ -165,9 +179,7 @@ const SkillCheck: React.FC = () => {
       {visible && (
         <>
           <svg className={classes.svg}>
-            {/*Circle track*/}
             <circle className={classes.track} />
-            {/*SkillCheck area*/}
             <circle transform={`rotate(${skillCheck.angle}, 250, 250)`} className={classes.skillArea} />
             <Indicator
               angle={skillCheck.angle}
@@ -186,7 +198,10 @@ const SkillCheck: React.FC = () => {
               skillCheck={skillCheck}
             />
           </svg>
-          <Box className={classes.button}>{skillCheck.key.toUpperCase()}</Box>
+          <Box className={classes.hub}>
+            <Text className={classes.kicker}>Skill</Text>
+            <Box className={classes.button}>{skillCheck.key.toUpperCase()}</Box>
+          </Box>
         </>
       )}
     </>

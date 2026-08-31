@@ -3,6 +3,7 @@ import React from 'react';
 import { IInput } from '../../../../typings/dialog';
 import { UseFormRegisterReturn } from 'react-hook-form';
 import LibIcon from '../../../../components/LibIcon';
+import { envy } from '../../../../theme/envy';
 
 interface Props {
   register: UseFormRegisterReturn;
@@ -10,9 +11,9 @@ interface Props {
   index: number;
 }
 
-const useStyles = createStyles((theme) => ({
+const useStyles = createStyles(() => ({
   eyeIcon: {
-    color: theme.colors.dark[2],
+    color: envy.cyan,
   },
 }));
 
