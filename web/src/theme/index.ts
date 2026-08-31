@@ -78,6 +78,17 @@ export const theme: MantineThemeOverride = {
             boxShadow: envy.glow,
           },
         },
+        icon: {
+          color: envy.cyan,
+        },
+      },
+    },
+    InputWrapper: {
+      styles: {
+        label: { color: envy.chromeMid, fontWeight: 600, letterSpacing: '0.04em' },
+        description: { color: envy.muted },
+        error: { color: envy.danger },
+        required: { color: envy.cyan },
       },
     },
     TextInput: {
@@ -105,11 +116,97 @@ export const theme: MantineThemeOverride = {
         dropdown: {
           background: envy.bgRaised,
           border: envy.border,
+          boxShadow: envy.panelShadow,
         },
         item: {
           '&[data-selected]': {
             background: envy.itemActive,
             color: envy.cyan,
+          },
+          '&[data-hovered]': {
+            background: envy.itemHover,
+          },
+        },
+      },
+    },
+    MultiSelect: {
+      styles: {
+        label: { color: envy.chromeMid, fontWeight: 600 },
+        description: { color: envy.muted },
+        dropdown: {
+          background: envy.bgRaised,
+          border: envy.border,
+          boxShadow: envy.panelShadow,
+        },
+        value: {
+          background: envy.itemActive,
+          color: envy.cyan,
+          border: envy.border,
+        },
+        item: {
+          '&[data-selected]': {
+            background: envy.itemActive,
+            color: envy.cyan,
+          },
+        },
+      },
+    },
+    ColorInput: {
+      styles: {
+        label: { color: envy.chromeMid, fontWeight: 600 },
+        description: { color: envy.muted },
+        dropdown: {
+          background: envy.bgRaised,
+          border: envy.border,
+          boxShadow: envy.panelShadow,
+        },
+      },
+    },
+    DatePicker: {
+      styles: {
+        label: { color: envy.chromeMid, fontWeight: 600 },
+        description: { color: envy.muted },
+        dropdown: {
+          background: envy.bgRaised,
+          border: envy.border,
+          boxShadow: envy.panelShadow,
+        },
+      },
+    },
+    DateRangePicker: {
+      styles: {
+        label: { color: envy.chromeMid, fontWeight: 600 },
+        description: { color: envy.muted },
+        dropdown: {
+          background: envy.bgRaised,
+          border: envy.border,
+          boxShadow: envy.panelShadow,
+        },
+      },
+    },
+    TimeInput: {
+      styles: {
+        label: { color: envy.chromeMid, fontWeight: 600 },
+        description: { color: envy.muted },
+      },
+    },
+    Calendar: {
+      styles: {
+        calendarHeaderLevel: { color: envy.text },
+        calendarHeaderControl: {
+          color: envy.cyan,
+          border: envy.border,
+          background: envy.item,
+        },
+        weekday: { color: envy.muted },
+        day: {
+          color: envy.text,
+          '&[data-selected]': {
+            backgroundColor: envy.cyan,
+            color: '#061014',
+          },
+          '&:hover': {
+            backgroundColor: envy.itemHover,
           },
         },
       },
@@ -142,6 +239,7 @@ export const theme: MantineThemeOverride = {
           background: envy.chromeHi,
         },
         label: { color: envy.muted },
+        markLabel: { color: envy.muted },
       },
     },
     Progress: {
@@ -153,6 +251,13 @@ export const theme: MantineThemeOverride = {
         bar: {
           background: `linear-gradient(90deg, ${envy.cyanDeep}, ${envy.cyanSoft})`,
           boxShadow: '0 0 12px rgba(0, 229, 255, 0.55)',
+        },
+      },
+    },
+    RingProgress: {
+      styles: {
+        root: {
+          filter: 'drop-shadow(0 0 12px rgba(0, 229, 255, 0.35))',
         },
       },
     },
@@ -170,6 +275,43 @@ export const theme: MantineThemeOverride = {
       styles: {
         label: { color: envy.chromeMid, fontWeight: 600 },
         description: { color: envy.muted },
+      },
+    },
+    HoverCard: {
+      styles: {
+        dropdown: {
+          background: envy.bgRaised,
+          border: envy.border,
+          boxShadow: envy.panelShadow,
+          color: envy.text,
+        },
+      },
+    },
+    Drawer: {
+      styles: {
+        drawer: {
+          background: envy.bgRaised,
+          borderRight: envy.border,
+          color: envy.text,
+        },
+        title: {
+          color: envy.cyan,
+          fontWeight: 800,
+          letterSpacing: '0.12em',
+          textTransform: 'uppercase',
+        },
+        overlay: {
+          background: 'rgba(0, 0, 0, 0.62)',
+        },
+      },
+    },
+    ActionIcon: {
+      styles: {
+        root: {
+          '&[data-variant="filled"]': {
+            boxShadow: envy.glow,
+          },
+        },
       },
     },
   },
