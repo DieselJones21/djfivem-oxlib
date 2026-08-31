@@ -20,7 +20,7 @@ const useStyles = createStyles((theme) => ({
   },
   sector: {
     fill: 'rgba(10, 14, 20, 0.92)',
-    color: envy.text,
+    color: envy.cyan,
     stroke: 'rgba(0, 229, 255, 0.28)',
     strokeWidth: 1,
 

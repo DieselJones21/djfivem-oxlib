@@ -9,3 +9,4 @@ pnpm-debug.log*
 /package/**/*.d.ts
 
 /web/node_modules
+/package/dist

@@ -1,8 +1,8 @@
 # Envy ox_lib
 
-Drop-in `ox_lib` with a custom Envy UI: black glass panels, electric cyan neon, and chrome edges. It is built to look closer to a branded street-luxe overlay than the usual gold-border restyle.
+Drop-in `ox_lib` **v3.39.0** with a custom Envy UI: black glass panels, electric cyan neon, and chrome edges.
 
-This is a modified [Community Ox / ox_lib](https://github.com/communityox/ox_lib) build. Lua APIs stay the same, so existing menus, progress bars, notifications, and dialogs keep working.
+This is a modified [Overextended ox_lib](https://github.com/overextended/ox_lib) v3.39.0 build (meets `ox_inventory`'s `3.36.4` requirement). Lua APIs stay the same, so existing menus, progress bars, notifications, and dialogs keep working.
 
 ## Install
 
@@ -26,11 +26,18 @@ setr ox:primaryShade 5
 
 ## What changed in the UI
 
-- Selection menu: branded header, item count badge, cyan icon wells, chrome item cards
-- Context menu: kicker + title + item pill, glowing close button, described action rows
-- Notifications and TextUI: compact glass cards with cyan icons
-- Progress bar: label and percent above a neon fill
-- Radial, skill check, and dialogs: same cyan/chrome language
+Every ox_lib NUI surface is restyled:
+
+- Selection menu
+- Context menu
+- Notifications
+- TextUI
+- Linear progress bar
+- Circle progress bar
+- Skill check
+- Radial menu
+- Alert dialog
+- Input dialog, including text, password, number, checkbox, select, slider, colour, date, time, and textarea fields
 
 ## Rebuild the UI
 
@@ -44,7 +51,7 @@ pnpm start -- --open # then add ?showcase=1 for a layered demo
 pnpm build          # writes web/build for in-game use
 ```
 
-Open `http://localhost:3000/?showcase=1` to preview the selection menu, context menu, notification, TextUI, and progress bar together.
+Open `http://localhost:3000/?showcase=1` for menus, notifications, TextUI, and the linear progress bar. Use the wrench drawer to preview the circle progress, skill check, radial menu, and input/alert dialogs.
 
 ## License
 
