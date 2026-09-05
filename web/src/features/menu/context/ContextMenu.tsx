@@ -212,19 +212,12 @@ const ContextMenu: React.FC = () => {
       captureKeysRef.current = !!(panel && panel.contains(e.target as Node));
     };
 
-    const focusHandler = (e: FocusEvent) => {
-      const panel = panelRef.current;
-      captureKeysRef.current = !!(panel && panel.contains(e.target as Node));
-    };
-
     window.addEventListener('keydown', keyHandler, true);
     window.addEventListener('pointerdown', pointerHandler, true);
-    window.addEventListener('focusin', focusHandler);
 
     return () => {
       window.removeEventListener('keydown', keyHandler, true);
       window.removeEventListener('pointerdown', pointerHandler, true);
-      window.removeEventListener('focusin', focusHandler);
     };
   }, [visible]);
 
