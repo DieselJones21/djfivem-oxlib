@@ -153,6 +153,8 @@ const useStyles = createStyles(() => ({
 const ContextMenu: React.FC = () => {
   const { classes, cx } = useStyles();
   const listRef = useRef<HTMLDivElement>(null);
+  const panelRef = useRef<HTMLDivElement>(null);
+  const captureKeysRef = useRef(false);
   const [visible, setVisible] = useState(false);
   const [canScrollUp, setCanScrollUp] = useState(false);
   const [canScrollDown, setCanScrollDown] = useState(false);
@@ -174,37 +176,56 @@ const ContextMenu: React.FC = () => {
     setCanScrollDown(max > 4 && top < max - 4);
   };
 
-  const handleListKeys = (event: React.KeyboardEvent<HTMLDivElement>) => {
+  const scrollListByKey = (code: string) => {
     const node = listRef.current;
-    if (!node) return;
-    if (event.code === 'ArrowDown' || event.code === 'PageDown') {
-      event.preventDefault();
-      node.scrollTop += event.code === 'PageDown' ? 220 : 56;
-    }
-    if (event.code === 'ArrowUp' || event.code === 'PageUp') {
-      event.preventDefault();
-      node.scrollTop -= event.code === 'PageUp' ? 220 : 56;
-    }
-    if (event.code === 'Home') {
-      event.preventDefault();
-      node.scrollTop = 0;
-    }
-    if (event.code === 'End') {
-      event.preventDefault();
-      node.scrollTop = node.scrollHeight;
-    }
+    if (!node) return false;
+    if (code === 'ArrowDown') node.scrollTop += 56;
+    else if (code === 'PageDown') node.scrollTop += 220;
+    else if (code === 'ArrowUp') node.scrollTop -= 56;
+    else if (code === 'PageUp') node.scrollTop -= 220;
+    else if (code === 'Home') node.scrollTop = 0;
+    else if (code === 'End') node.scrollTop = node.scrollHeight;
+    else return false;
+    return true;
   };
 
   useEffect(() => {
-    if (!visible) return;
+    if (!visible) {
+      captureKeysRef.current = false;
+      return;
+    }
 
     const keyHandler = (e: KeyboardEvent) => {
-      if (['Escape'].includes(e.code)) closeContext();
+      if (e.code === 'Escape') {
+        closeContext();
+        return;
+      }
+      if (!captureKeysRef.current) return;
+      if (scrollListByKey(e.code)) {
+        e.preventDefault();
+        e.stopPropagation();
+      }
     };
 
-    window.addEventListener('keydown', keyHandler);
+    const pointerHandler = (e: PointerEvent) => {
+      const panel = panelRef.current;
+      captureKeysRef.current = !!(panel && panel.contains(e.target as Node));
+    };
 
-    return () => window.removeEventListener('keydown', keyHandler);
+    const focusHandler = (e: FocusEvent) => {
+      const panel = panelRef.current;
+      captureKeysRef.current = !!(panel && panel.contains(e.target as Node));
+    };
+
+    window.addEventListener('keydown', keyHandler, true);
+    window.addEventListener('pointerdown', pointerHandler, true);
+    window.addEventListener('focusin', focusHandler);
+
+    return () => {
+      window.removeEventListener('keydown', keyHandler, true);
+      window.removeEventListener('pointerdown', pointerHandler, true);
+      window.removeEventListener('focusin', focusHandler);
+    };
   }, [visible]);
 
   useEffect(() => {
@@ -219,6 +240,7 @@ const ContextMenu: React.FC = () => {
 
     node.scrollTop = 0;
     node.focus({ preventScroll: true });
+    captureKeysRef.current = true;
 
     const onWheel = (event: WheelEvent) => {
       if (node.scrollHeight <= node.clientHeight) return;
@@ -260,7 +282,13 @@ const ContextMenu: React.FC = () => {
   return (
     <Box className={classes.container}>
       <ScaleFade visible={visible} fill>
-        <Box className={classes.panel}>
+        <Box
+          ref={panelRef}
+          className={classes.panel}
+          onPointerDown={() => {
+            captureKeysRef.current = true;
+          }}
+        >
           <Flex className={classes.header}>
             {contextMenu.menu && (
               <HeaderButton icon="chevron-left" iconSize={16} handleClick={() => openMenu(contextMenu.menu)} />
@@ -284,7 +312,11 @@ const ContextMenu: React.FC = () => {
               ref={listRef}
               tabIndex={0}
               className={`${classes.buttonsContainer} envy-scroll`}
-              onKeyDown={handleListKeys}
+              onMouseDown={(event) => {
+                if (event.target === listRef.current) {
+                  listRef.current?.focus({ preventScroll: true });
+                }
+              }}
             >
               <Stack className={classes.buttonsFlexWrapper}>
                 {Object.entries(contextMenu.options).map((option, index) => (
