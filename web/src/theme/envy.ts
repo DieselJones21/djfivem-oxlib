@@ -57,12 +57,14 @@ export const envyLabel = {
 };
 
 export const envyPanel = {
-  background: envy.bg,
+  background: 'rgba(8, 10, 14, 0.82)',
   border: envy.border,
   borderRadius: envy.radius,
   boxShadow: envy.panelShadow,
   position: 'relative' as const,
   overflow: 'hidden',
+  backdropFilter: 'blur(18px)',
+  WebkitBackdropFilter: 'blur(18px)',
 };
 
 export const envyItem = {
@@ -109,5 +111,9 @@ export const envyModalStyles = {
   },
   body: {
     padding: '8px 16px 16px',
+    maxHeight: 'min(70vh, 640px)',
+    overflowY: 'auto' as const,
+    overflowX: 'hidden' as const,
+    minHeight: 0,
   },
 };

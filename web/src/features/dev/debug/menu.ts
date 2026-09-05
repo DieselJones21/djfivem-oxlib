@@ -39,6 +39,31 @@ export const debugMenu = () => {
               icon: 'key',
               description: 'Quiet entry kit.',
             },
+            {
+              label: 'Bag Drop',
+              icon: 'bag-shopping',
+              description: 'Stash the take off the street.',
+            },
+            {
+              label: 'Weapon Case',
+              icon: 'gun',
+              description: 'Check the hardware without flashing it.',
+            },
+            {
+              label: 'Garage Ticket',
+              icon: 'warehouse',
+              description: 'Pull a ride from the hidden lot.',
+            },
+            {
+              label: 'Street Radio',
+              icon: 'radio',
+              description: 'Tune the block frequency.',
+            },
+            {
+              label: 'Leave Market',
+              icon: 'door-open',
+              description: 'Walk off and close this menu.',
+            },
           ],
         },
       },

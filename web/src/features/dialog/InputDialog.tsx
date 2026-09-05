@@ -128,6 +128,7 @@ const InputDialog: React.FC = () => {
           ...envyModalStyles,
           title: { ...envyModalStyles.title, textAlign: 'center', width: '100%', fontSize: 18 },
         }}
+        classNames={{ body: 'envy-scroll' }}
         title={fields.heading}
         withCloseButton={false}
         overlayOpacity={0.65}
