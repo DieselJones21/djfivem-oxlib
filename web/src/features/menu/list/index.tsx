@@ -36,8 +36,11 @@ const useStyles = createStyles((_theme, params: { position?: MenuPosition; itemC
   buttonsWrapper: {
     height: 'fit-content',
     maxHeight: 415,
-    overflow: 'hidden',
+    minHeight: 0,
+    overflowY: 'auto',
+    overflowX: 'hidden',
     background: 'transparent',
+    pointerEvents: 'auto',
   },
   scrollArrow: {
     background: 'transparent',
@@ -62,6 +65,7 @@ const ListMenu: React.FC = () => {
   const [indexStates, setIndexStates] = useState<Record<number, number>>({});
   const [checkedStates, setCheckedStates] = useState<Record<number, boolean>>({});
   const listRefs = useRef<Array<HTMLDivElement | null>>([]);
+  const listScrollRef = useRef<HTMLDivElement>(null);
   const firstRenderRef = useRef(false);
   const { classes } = useStyles({ position: menu.position, itemCount: menu.items.length, selected });
 
@@ -167,6 +171,22 @@ const ListMenu: React.FC = () => {
     return () => window.removeEventListener('keydown', keyHandler);
   }, [visible]);
 
+  useEffect(() => {
+    if (!visible) return;
+    const node = listScrollRef.current;
+    if (!node) return;
+
+    const onWheel = (event: WheelEvent) => {
+      if (node.scrollHeight <= node.clientHeight) return;
+      event.preventDefault();
+      event.stopPropagation();
+      node.scrollTop += event.deltaY;
+    };
+
+    node.addEventListener('wheel', onWheel, { passive: false });
+    return () => node.removeEventListener('wheel', onWheel);
+  }, [visible, menu.items.length]);
+
   const isValuesObject = useCallback(
     (values?: Array<string | { label: string; description: string }>) => {
       return Array.isArray(values) && typeof values[indexStates[selected]] === 'object';
@@ -217,7 +237,11 @@ const ListMenu: React.FC = () => {
         >
           <Box className={classes.container}>
             <Header title={menu.title} current={selected + 1} total={menu.items.length} />
-            <Box className={classes.buttonsWrapper} onKeyDown={(e: React.KeyboardEvent<HTMLDivElement>) => moveMenu(e)}>
+            <Box
+              ref={listScrollRef}
+              className={`${classes.buttonsWrapper} envy-scroll`}
+              onKeyDown={(e: React.KeyboardEvent<HTMLDivElement>) => moveMenu(e)}
+            >
               <FocusTrap
                 active={visible}
                 focusTrapOptions={{
@@ -225,7 +249,7 @@ const ListMenu: React.FC = () => {
                   clickOutsideDeactivates: false,
                 }}
               >
-                <Stack spacing={8} p={8} sx={{ overflowY: 'scroll' }}>
+                <Stack spacing={8} p={8}>
                   {menu.items.map((item, index) => (
                     <React.Fragment key={`menu-item-${index}`}>
                       {item.label && (

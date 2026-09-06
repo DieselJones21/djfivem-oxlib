@@ -56,6 +56,7 @@ const AlertDialog: React.FC = () => {
         exitTransitionDuration={150}
         transition="fade"
         styles={envyModalStyles}
+        classNames={{ body: 'envy-scroll' }}
         title={<ReactMarkdown components={MarkdownComponents}>{dialogData.header}</ReactMarkdown>}
       >
         <Stack className={classes.contentStack}>

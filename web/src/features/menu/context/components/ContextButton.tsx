@@ -28,14 +28,15 @@ const useStyles = createStyles((_theme, params: { disabled?: boolean; readOnly?:
   button: {
     height: 'fit-content',
     width: '100%',
-    padding: 12,
+    padding: '12px 12px 12px 14px',
     ...envyItem,
     backgroundColor: envy.item,
+    boxShadow: 'inset 3px 0 0 rgba(0, 229, 255, 0.18)',
     '&:hover': {
       backgroundColor: params.readOnly ? envy.item : envy.itemHover,
       cursor: params.readOnly ? 'unset' : 'pointer',
-      borderColor: params.readOnly ? undefined : envy.cyan,
-      boxShadow: params.readOnly ? undefined : envy.glow,
+      borderColor: params.readOnly ? undefined : 'rgba(0, 229, 255, 0.7)',
+      boxShadow: params.readOnly ? undefined : `inset 3px 0 0 ${envy.cyan}, 0 0 16px rgba(0, 229, 255, 0.16)`,
     },
     '&:active': {
       transform: params.readOnly ? 'unset' : undefined,

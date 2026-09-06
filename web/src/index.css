@@ -332,6 +332,33 @@ code {
   height: 0;
 }
 
+.envy-scroll {
+  scrollbar-width: auto;
+  scrollbar-color: rgba(0, 229, 255, 0.75) rgba(255, 255, 255, 0.08);
+  overscroll-behavior: contain;
+  scrollbar-gutter: stable;
+}
+
+.envy-scroll::-webkit-scrollbar {
+  width: 12px !important;
+  height: 12px !important;
+}
+
+.envy-scroll::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.04);
+  border-radius: 999px;
+}
+
+.envy-scroll::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #5cfff7, #00a8be);
+  border-radius: 999px;
+  border: 2px solid rgba(8, 10, 14, 0.4);
+}
+
+.envy-scroll::-webkit-scrollbar-thumb:hover {
+  background: #00e5ff;
+}
+
 .toast-inform {
   background-color: #00a8be;
 }
