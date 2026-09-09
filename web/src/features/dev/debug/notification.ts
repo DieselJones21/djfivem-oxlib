@@ -8,7 +8,7 @@ export const debugCustomNotification = () => {
         action: 'notify',
         data: {
           title: 'UI Demo',
-          description: 'Envy cyan chrome overlay is live.  \nKeep the glow tight and the streets louder.',
+          description: 'Black teal silver chrome overlay is live.',
           type: 'inform',
           position: 'top-center',
           duration: 20000,

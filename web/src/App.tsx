@@ -26,7 +26,9 @@ const App: React.FC = () => {
     setClipboard(data);
   });
 
-  fetchNui('init');
+  useEffect(() => {
+    fetchNui('init');
+  }, []);
 
   useEffect(() => {
     if (!isEnvBrowser()) return;

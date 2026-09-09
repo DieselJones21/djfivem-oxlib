@@ -28,7 +28,7 @@ const useStyles = createStyles(() => ({
     letterSpacing: '0.08em',
     textTransform: 'uppercase',
     fontSize: 12,
-    textShadow: '0 0 10px rgba(0, 229, 255, 0.45)',
+    textShadow: `0 0 10px ${envy.tealGlow}`,
   },
   description: {
     fontSize: 12,
@@ -223,7 +223,7 @@ const Notifications: React.FC = () => {
     );
   });
 
-  return <Toaster />;
+  return <Toaster containerStyle={{ background: 'transparent', pointerEvents: 'none' }} />;
 };
 
 export default Notifications;

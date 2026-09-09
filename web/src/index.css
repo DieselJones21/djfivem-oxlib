@@ -289,10 +289,13 @@
 
 html {
   color-scheme: normal !important;
+  background: transparent !important;
+  background-color: transparent !important;
 }
 
 body {
-  background: none !important;
+  background: transparent !important;
+  background-color: transparent !important;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans',
     'Droid Sans', 'Helvetica Neue', sans-serif;
@@ -309,6 +312,8 @@ p {
 
 #root {
   height: 100%;
+  background: transparent !important;
+  background-color: transparent !important;
 }
 
 code {
@@ -334,7 +339,7 @@ code {
 
 .envy-scroll {
   scrollbar-width: auto;
-  scrollbar-color: rgba(0, 229, 255, 0.75) rgba(255, 255, 255, 0.08);
+  scrollbar-color: rgba(20, 184, 166, 0.75) rgba(255, 255, 255, 0.08);
   overscroll-behavior: contain;
   scrollbar-gutter: stable;
 }
@@ -350,17 +355,17 @@ code {
 }
 
 .envy-scroll::-webkit-scrollbar-thumb {
-  background: linear-gradient(180deg, #5cfff7, #00a8be);
+  background: linear-gradient(180deg, #e8eef4, #14b8a6);
   border-radius: 999px;
   border: 2px solid rgba(8, 10, 14, 0.4);
 }
 
 .envy-scroll::-webkit-scrollbar-thumb:hover {
-  background: #00e5ff;
+  background: #14b8a6;
 }
 
 .toast-inform {
-  background-color: #00a8be;
+  background-color: #0e8f84;
 }
 
 .toast-success {

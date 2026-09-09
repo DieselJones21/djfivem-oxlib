@@ -25,7 +25,8 @@ const useStyles = createStyles((_theme, params: { difficultyOffset: number }) =>
     r: 50,
     width: 500,
     height: 500,
-    filter: 'drop-shadow(0 0 18px rgba(0, 229, 255, 0.4))',
+    background: 'transparent',
+    overflow: 'visible',
   },
   track: {
     fill: 'transparent',
@@ -50,7 +51,7 @@ const useStyles = createStyles((_theme, params: { difficultyOffset: number }) =>
     cy: 250,
     strokeDasharray: circleCircumference,
     strokeDashoffset: circleCircumference - (Math.PI * 50 * params.difficultyOffset) / 180,
-    filter: 'drop-shadow(0 0 8px rgba(0, 229, 255, 0.9))',
+    filter: `drop-shadow(0 0 8px ${envy.tealGlow})`,
     '@media (min-height: 1440px)': {
       strokeWidth: 10,
       r: 65,
@@ -106,7 +107,7 @@ const useStyles = createStyles((_theme, params: { difficultyOffset: number }) =>
     fontSize: 16,
     fontWeight: 800,
     lineHeight: 1,
-    textShadow: '0 0 10px rgba(0, 229, 255, 0.55)',
+    textShadow: `0 0 10px ${envy.tealGlow}`,
     '@media (min-height: 1440px)': {
       fontSize: 22,
     },

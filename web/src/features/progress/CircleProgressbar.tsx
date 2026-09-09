@@ -34,7 +34,7 @@ const useStyles = createStyles((_theme, params: { position: 'middle' | 'bottom';
     justifyContent: 'center',
   },
   progress: {
-    filter: 'drop-shadow(0 0 12px rgba(0, 229, 255, 0.45))',
+    filter: `drop-shadow(0 0 12px ${envy.tealGlow})`,
     '> svg > circle:nth-child(1)': {
       stroke: 'rgba(197, 205, 214, 0.22)',
     },
@@ -48,7 +48,7 @@ const useStyles = createStyles((_theme, params: { position: 'middle' | 'bottom';
   value: {
     textAlign: 'center',
     fontFamily: 'Roboto Mono',
-    textShadow: '0 0 12px rgba(0, 229, 255, 0.55)',
+    textShadow: `0 0 12px ${envy.tealGlow}`,
     color: envy.cyan,
     fontWeight: 800,
   },
@@ -78,30 +78,42 @@ const CircleProgressbar: React.FC = () => {
   const [position, setPosition] = React.useState<'middle' | 'bottom'>('middle');
   const [value, setValue] = React.useState(0);
   const [label, setLabel] = React.useState('');
+  const intervalRef = React.useRef<number | null>(null);
   const theme = useMantineTheme();
   const { classes } = useStyles({ position, duration: progressDuration });
 
+  const clearProgressInterval = () => {
+    if (intervalRef.current !== null) {
+      window.clearInterval(intervalRef.current);
+      intervalRef.current = null;
+    }
+  };
+
   useNuiEvent('progressCancel', () => {
+    clearProgressInterval();
     setValue(99);
     setVisible(false);
   });
 
   useNuiEvent<CircleProgressbarProps>('circleProgress', (data) => {
     if (visible) return;
+    clearProgressInterval();
     setVisible(true);
     setValue(0);
     setLabel(data.label || '');
     setProgressDuration(data.duration);
     setPosition(data.position || 'middle');
     const onePercent = data.duration * 0.01;
-    const updateProgress = setInterval(() => {
+    intervalRef.current = window.setInterval(() => {
       setValue((previousValue) => {
         const newValue = previousValue + 1;
-        newValue >= 100 && clearInterval(updateProgress);
+        if (newValue >= 100) clearProgressInterval();
         return newValue;
       });
     }, onePercent);
   });
+
+  React.useEffect(() => () => clearProgressInterval(), []);
 
   return (
     <>

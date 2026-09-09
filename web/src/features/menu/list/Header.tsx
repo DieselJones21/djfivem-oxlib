@@ -12,7 +12,9 @@ const useStyles = createStyles(() => ({
     justifyContent: 'center',
     gap: 4,
     background: envy.headerGradient,
-    borderBottom: `1px solid rgba(0, 229, 255, 0.28)`,
+    borderBottom: `1px solid ${envy.silverLine}`,
+    borderTopLeftRadius: envy.radius,
+    borderTopRightRadius: envy.radius,
     position: 'relative',
     '&::after': {
       content: '""',
@@ -22,7 +24,7 @@ const useStyles = createStyles(() => ({
       bottom: 0,
       height: 2,
       background: `linear-gradient(90deg, transparent, ${envy.cyan}, transparent)`,
-      boxShadow: '0 0 12px rgba(0, 229, 255, 0.7)',
+      boxShadow: `0 0 12px ${envy.tealGlow}`,
     },
   },
   kickerRow: {
@@ -61,15 +63,15 @@ const useStyles = createStyles(() => ({
     height: 34,
     padding: '0 8px',
     borderRadius: 999,
-    border: `1px solid ${envy.cyan}`,
-    color: envy.cyan,
+    border: `1px solid ${envy.silver}`,
+    color: envy.teal,
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
     fontSize: 12,
     fontWeight: 700,
     boxShadow: envy.glow,
-    background: 'rgba(0, 229, 255, 0.08)',
+    background: envy.tealFill,
   },
 }));
 
