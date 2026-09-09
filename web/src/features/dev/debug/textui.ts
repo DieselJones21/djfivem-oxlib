@@ -7,7 +7,7 @@ export const debugTextUI = () => {
       {
         action: 'textUi',
         data: {
-          text: 'UI Demo  \n Hold the look: cyan chrome, black glass, neon edge.',
+          text: 'UI Demo  \n Black panels, teal accents, silver chrome edges.',
           position: 'top-center',
           icon: 'circle-info',
         },

@@ -1,26 +1,26 @@
 export const envyPalette = [
-  '#F3FFFC',
-  '#C9F7EF',
-  '#96EDDF',
-  '#5FE0CC',
-  '#3DD6C0',
-  '#2AD4C1',
-  '#1AAF9E',
-  '#148B7E',
-  '#0E6860',
-  '#084540',
+  '#E9FFF9',
+  '#BFEFE6',
+  '#8BDDD0',
+  '#55C9B8',
+  '#2BB8A6',
+  '#14B8A6',
+  '#0F9485',
+  '#0C766A',
+  '#085850',
+  '#053B36',
 ] as const;
 
-const tealRgb = '42, 212, 193';
-const silverRgb = '201, 208, 216';
+const tealRgb = '20, 184, 166';
+const silverRgb = '210, 218, 226';
 
 export const envy = {
-  teal: '#2AD4C1',
-  tealSoft: '#9AF3E8',
-  tealDeep: '#0E8F84',
-  cyan: '#2AD4C1',
-  cyanSoft: '#9AF3E8',
-  cyanDeep: '#0E8F84',
+  teal: '#14B8A6',
+  tealSoft: '#5EEAD4',
+  tealDeep: '#0F766E',
+  cyan: '#14B8A6',
+  cyanSoft: '#5EEAD4',
+  cyanDeep: '#0F766E',
   chromeHi: '#F7FAFC',
   chromeMid: '#C9D0D8',
   chromeLo: '#7A8590',
@@ -37,11 +37,11 @@ export const envy = {
   itemActive: `rgba(${tealRgb}, 0.16)`,
   radius: 14,
   radiusSm: 10,
-  border: `1px solid rgba(${silverRgb}, 0.42)`,
-  borderTeal: `1px solid rgba(${tealRgb}, 0.55)`,
-  borderStrong: `1px solid rgba(${tealRgb}, 0.88)`,
+  border: `1px solid rgba(${silverRgb}, 0.55)`,
+  borderTeal: `1px solid rgba(${tealRgb}, 0.62)`,
+  borderStrong: `1px solid rgba(${tealRgb}, 0.92)`,
   glow: `0 0 12px rgba(${tealRgb}, 0.22)`,
-  glowStrong: `0 0 16px rgba(${tealRgb}, 0.38)`,
+  glowStrong: `0 0 16px rgba(${tealRgb}, 0.36)`,
   tealFill: `rgba(${tealRgb}, 0.10)`,
   tealFillStrong: `rgba(${tealRgb}, 0.18)`,
   tealLine: `rgba(${tealRgb}, 0.45)`,
@@ -52,7 +52,7 @@ export const envy = {
     'inset 0 1px 0 rgba(255, 255, 255, 0.22), inset 0 -1px 0 rgba(0, 0, 0, 0.55)',
   panelShadow: `0 10px 24px rgba(0, 0, 0, 0.55), 0 0 0 1px rgba(${silverRgb}, 0.22)`,
   headerGradient:
-    'linear-gradient(180deg, rgba(214, 222, 230, 0.20) 0%, rgba(28, 32, 38, 0.96) 34%, rgba(6, 8, 10, 0.98) 100%)',
+    'linear-gradient(180deg, rgba(232, 238, 244, 0.28) 0%, rgba(36, 42, 48, 0.96) 38%, rgba(6, 8, 10, 0.98) 100%)',
   chromeGradient:
     'linear-gradient(180deg, #FFFFFF 0%, #E6ECF2 20%, #AAB4BE 48%, #6A737C 58%, #D5DDE5 100%)',
 };
