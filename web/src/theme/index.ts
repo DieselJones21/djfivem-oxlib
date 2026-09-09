@@ -17,7 +17,7 @@ export const theme: MantineThemeOverride = {
     envy: [...envyPalette] as unknown as Tuple<string, 10>,
   },
   shadows: {
-    sm: '0 8px 24px rgba(0, 0, 0, 0.45), 0 0 16px rgba(0, 229, 255, 0.12)',
+    sm: envy.panelShadow,
     md: envy.panelShadow,
   },
   components: {
@@ -57,7 +57,7 @@ export const theme: MantineThemeOverride = {
         },
         header: {
           background: envy.headerGradient,
-          borderBottom: `1px solid rgba(0, 229, 255, 0.28)`,
+          borderBottom: `1px solid ${envy.silverLine}`,
           marginBottom: 12,
           padding: '14px 16px',
         },
@@ -259,14 +259,14 @@ export const theme: MantineThemeOverride = {
         },
         bar: {
           background: `linear-gradient(90deg, ${envy.cyanDeep}, ${envy.cyanSoft})`,
-          boxShadow: '0 0 12px rgba(0, 229, 255, 0.55)',
+          boxShadow: envy.glowStrong,
         },
       },
     },
     RingProgress: {
       styles: {
         root: {
-          filter: 'drop-shadow(0 0 12px rgba(0, 229, 255, 0.35))',
+          filter: `drop-shadow(0 0 10px ${envy.tealGlow})`,
         },
       },
     },

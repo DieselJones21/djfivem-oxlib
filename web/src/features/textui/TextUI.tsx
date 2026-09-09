@@ -44,7 +44,7 @@ const useStyles = createStyles((_theme, params: { position?: TextUiPosition }) =
     justifyContent: 'center',
     border: `1px solid ${envy.cyan}`,
     color: envy.cyan,
-    background: 'rgba(0, 229, 255, 0.08)',
+    background: envy.tealFill,
     boxShadow: envy.glow,
     flexShrink: 0,
   },

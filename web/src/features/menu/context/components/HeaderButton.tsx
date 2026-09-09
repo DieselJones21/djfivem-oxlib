@@ -21,15 +21,15 @@ const useStyles = createStyles((_theme, params: { canClose?: boolean }) => ({
     textAlign: 'center',
     justifyContent: 'center',
     padding: 0,
-    background: 'rgba(0, 229, 255, 0.08)',
-    border: `1px solid ${envy.cyan}`,
+    background: envy.tealFill,
+    border: `1px solid ${envy.silver}`,
     boxShadow: envy.glow,
     '&:hover': {
       background: envy.itemHover,
     },
   },
   root: {
-    border: `1px solid ${envy.cyan}`,
+    border: `1px solid ${envy.silver}`,
   },
   label: {
     color: params.canClose === false ? envy.muted : envy.cyan,

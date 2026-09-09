@@ -339,7 +339,7 @@ code {
 
 .envy-scroll {
   scrollbar-width: auto;
-  scrollbar-color: rgba(0, 229, 255, 0.75) rgba(255, 255, 255, 0.08);
+  scrollbar-color: rgba(42, 212, 193, 0.75) rgba(255, 255, 255, 0.08);
   overscroll-behavior: contain;
   scrollbar-gutter: stable;
 }
@@ -355,17 +355,17 @@ code {
 }
 
 .envy-scroll::-webkit-scrollbar-thumb {
-  background: linear-gradient(180deg, #5cfff7, #00a8be);
+  background: linear-gradient(180deg, #e8eef4, #2ad4c1);
   border-radius: 999px;
   border: 2px solid rgba(8, 10, 14, 0.4);
 }
 
 .envy-scroll::-webkit-scrollbar-thumb:hover {
-  background: #00e5ff;
+  background: #2ad4c1;
 }
 
 .toast-inform {
-  background-color: #00a8be;
+  background-color: #0e8f84;
 }
 
 .toast-success {

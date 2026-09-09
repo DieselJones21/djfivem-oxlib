@@ -1,47 +1,60 @@
 export const envyPalette = [
-  '#E7FFFF',
-  '#B4FBFF',
-  '#7CF5FF',
-  '#3DEAFF',
-  '#12E0FF',
-  '#00D4F0',
-  '#00C0DC',
-  '#00A4BC',
-  '#008498',
-  '#006070',
+  '#F3FFFC',
+  '#C9F7EF',
+  '#96EDDF',
+  '#5FE0CC',
+  '#3DD6C0',
+  '#2AD4C1',
+  '#1AAF9E',
+  '#148B7E',
+  '#0E6860',
+  '#084540',
 ] as const;
 
+const tealRgb = '42, 212, 193';
+const silverRgb = '201, 208, 216';
+
 export const envy = {
-  cyan: '#00E5FF',
-  cyanSoft: '#7AFFF8',
-  cyanDeep: '#00A8BE',
-  chromeHi: '#F4F7FA',
-  chromeMid: '#C5CDD6',
+  teal: '#2AD4C1',
+  tealSoft: '#9AF3E8',
+  tealDeep: '#0E8F84',
+  cyan: '#2AD4C1',
+  cyanSoft: '#9AF3E8',
+  cyanDeep: '#0E8F84',
+  chromeHi: '#F7FAFC',
+  chromeMid: '#C9D0D8',
   chromeLo: '#7A8590',
+  silver: '#C9D0D8',
   text: '#F4F7FA',
-  muted: '#9AA8B3',
+  muted: '#A7B0B8',
   danger: '#FF5C7A',
   success: '#3DFFC8',
   warning: '#FFD166',
-  bg: 'rgba(6, 8, 12, 0.94)',
-  bgRaised: 'rgba(10, 14, 20, 0.96)',
-  item: 'rgba(12, 16, 22, 0.92)',
-  itemHover: 'rgba(0, 229, 255, 0.10)',
-  itemActive: 'rgba(0, 229, 255, 0.16)',
+  bg: 'rgba(4, 6, 8, 0.96)',
+  bgRaised: 'rgba(8, 10, 12, 0.97)',
+  item: 'rgba(10, 12, 16, 0.94)',
+  itemHover: `rgba(${tealRgb}, 0.10)`,
+  itemActive: `rgba(${tealRgb}, 0.16)`,
   radius: 14,
   radiusSm: 10,
-  border: '1px solid rgba(0, 229, 255, 0.42)',
-  borderStrong: '1px solid rgba(0, 229, 255, 0.78)',
-  glow: '0 0 12px rgba(0, 229, 255, 0.18)',
-  glowStrong: '0 0 16px rgba(0, 229, 255, 0.32)',
+  border: `1px solid rgba(${silverRgb}, 0.42)`,
+  borderTeal: `1px solid rgba(${tealRgb}, 0.55)`,
+  borderStrong: `1px solid rgba(${tealRgb}, 0.88)`,
+  glow: `0 0 12px rgba(${tealRgb}, 0.22)`,
+  glowStrong: `0 0 16px rgba(${tealRgb}, 0.38)`,
+  tealFill: `rgba(${tealRgb}, 0.10)`,
+  tealFillStrong: `rgba(${tealRgb}, 0.18)`,
+  tealLine: `rgba(${tealRgb}, 0.45)`,
+  tealLineSoft: `rgba(${tealRgb}, 0.22)`,
+  tealGlow: `rgba(${tealRgb}, 0.55)`,
+  silverLine: `rgba(${silverRgb}, 0.38)`,
   insetChrome:
-    'inset 0 1px 0 rgba(255, 255, 255, 0.12), inset 0 -1px 0 rgba(0, 0, 0, 0.4)',
-  panelShadow:
-    '0 10px 24px rgba(0, 0, 0, 0.45), 0 0 0 1px rgba(0, 229, 255, 0.16)',
+    'inset 0 1px 0 rgba(255, 255, 255, 0.22), inset 0 -1px 0 rgba(0, 0, 0, 0.55)',
+  panelShadow: `0 10px 24px rgba(0, 0, 0, 0.55), 0 0 0 1px rgba(${silverRgb}, 0.22)`,
   headerGradient:
-    'linear-gradient(180deg, rgba(36, 44, 54, 0.96) 0%, rgba(10, 13, 18, 0.98) 100%)',
+    'linear-gradient(180deg, rgba(214, 222, 230, 0.20) 0%, rgba(28, 32, 38, 0.96) 34%, rgba(6, 8, 10, 0.98) 100%)',
   chromeGradient:
-    'linear-gradient(180deg, #F7FAFC 0%, #C5CDD6 42%, #8A949E 58%, #E8EEF4 100%)',
+    'linear-gradient(180deg, #FFFFFF 0%, #E6ECF2 20%, #AAB4BE 48%, #6A737C 58%, #D5DDE5 100%)',
 };
 
 export const envyDropdown = {
@@ -57,7 +70,7 @@ export const envyLabel = {
 };
 
 export const envyPanel = {
-  background: 'rgba(8, 10, 14, 0.94)',
+  background: 'rgba(6, 8, 10, 0.96)',
   border: envy.border,
   borderRadius: envy.radius,
   boxShadow: envy.panelShadow,
@@ -75,12 +88,12 @@ export const envyItem = {
 };
 
 export const envyKicker = {
-  color: envy.cyan,
+  color: envy.teal,
   fontSize: 11,
   fontWeight: 700,
   letterSpacing: '0.22em',
   textTransform: 'uppercase' as const,
-  textShadow: '0 0 12px rgba(0, 229, 255, 0.55)',
+  textShadow: `0 0 12px ${envy.tealGlow}`,
 };
 
 export const envyModalStyles = {
@@ -94,7 +107,7 @@ export const envyModalStyles = {
   },
   header: {
     background: envy.headerGradient,
-    borderBottom: '1px solid rgba(0, 229, 255, 0.28)',
+    borderBottom: `1px solid ${envy.silverLine}`,
     marginBottom: 12,
     padding: '14px 16px',
   },

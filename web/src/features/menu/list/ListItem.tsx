@@ -42,14 +42,14 @@ const useStyles = createStyles((_theme, params: { iconColor?: string }) => ({
     width: 38,
     height: 38,
     borderRadius: 8,
-    border: `1px solid rgba(0, 229, 255, 0.35)`,
-    background: 'rgba(0, 229, 255, 0.08)',
-    boxShadow: 'inset 0 0 10px rgba(0, 229, 255, 0.12)',
+    border: envy.borderTeal,
+    background: envy.tealFill,
+    boxShadow: `inset 0 0 10px ${envy.tealFillStrong}`,
   },
   icon: {
     fontSize: 18,
     color: params.iconColor || envy.cyan,
-    filter: 'drop-shadow(0 0 6px rgba(0, 229, 255, 0.55))',
+    filter: `drop-shadow(0 0 6px ${envy.tealGlow})`,
   },
   label: {
     color: envy.text,

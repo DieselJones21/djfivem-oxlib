@@ -32,12 +32,12 @@ const useStyles = createStyles((_theme, params: { disabled?: boolean; readOnly?:
     padding: '12px 12px 12px 14px',
     ...envyItem,
     backgroundColor: envy.item,
-    boxShadow: 'inset 3px 0 0 rgba(0, 229, 255, 0.18)',
+    boxShadow: `inset 3px 0 0 ${envy.tealLineSoft}`,
     '&:hover': {
       backgroundColor: params.readOnly ? envy.item : envy.itemHover,
       cursor: params.readOnly ? 'unset' : 'pointer',
-      borderColor: params.readOnly ? undefined : 'rgba(0, 229, 255, 0.7)',
-      boxShadow: params.readOnly ? undefined : `inset 3px 0 0 ${envy.cyan}, 0 0 16px rgba(0, 229, 255, 0.16)`,
+      borderColor: params.readOnly ? undefined : envy.teal,
+      boxShadow: params.readOnly ? undefined : `inset 3px 0 0 ${envy.teal}, ${envy.glow}`,
     },
     '&:active': {
       transform: params.readOnly ? 'unset' : undefined,
@@ -75,9 +75,9 @@ const useStyles = createStyles((_theme, params: { disabled?: boolean; readOnly?:
     justifyContent: 'center',
     alignItems: 'center',
     borderRadius: 8,
-    border: '1px solid rgba(0, 229, 255, 0.35)',
-    background: 'rgba(0, 229, 255, 0.08)',
-    color: envy.cyan,
+    border: envy.borderTeal,
+    background: envy.tealFill,
+    color: envy.teal,
   },
   buttonTitleText: {
     overflowWrap: 'break-word',

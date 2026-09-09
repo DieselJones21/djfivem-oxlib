@@ -46,7 +46,7 @@ const useStyles = createStyles(() => ({
     padding: '10px 10px 12px',
     background: envy.headerGradient,
     borderRadius: envy.radiusSm,
-    border: '1px solid rgba(0, 229, 255, 0.18)',
+    border: `1px solid ${envy.silverLine}`,
     position: 'relative',
     flexShrink: 0,
     '&::after': {
@@ -57,7 +57,7 @@ const useStyles = createStyles(() => ({
       bottom: 0,
       height: 1,
       background: `linear-gradient(90deg, transparent, ${envy.cyan}, transparent)`,
-      boxShadow: '0 0 10px rgba(0, 229, 255, 0.55)',
+      boxShadow: `0 0 10px ${envy.tealGlow}`,
     },
   },
   titleBlock: {
@@ -97,14 +97,14 @@ const useStyles = createStyles(() => ({
     lineHeight: 1.2,
   },
   countPill: {
-    border: `1px solid ${envy.cyan}`,
-    color: envy.cyan,
+    border: `1px solid ${envy.silver}`,
+    color: envy.teal,
     borderRadius: 999,
     fontSize: 10,
     fontWeight: 800,
     letterSpacing: '0.12em',
     padding: '4px 8px',
-    background: 'rgba(0, 229, 255, 0.08)',
+    background: envy.tealFill,
     whiteSpace: 'nowrap',
   },
   listShell: {

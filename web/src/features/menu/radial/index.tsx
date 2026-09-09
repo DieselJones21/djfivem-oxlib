@@ -10,7 +10,7 @@ import { useLocales } from '../../../providers/LocaleProvider';
 import LibIcon from '../../../components/LibIcon';
 import { envy } from '../../../theme/envy';
 
-const useStyles = createStyles((theme) => ({
+const useStyles = createStyles(() => ({
   wrapper: {
     position: 'absolute',
     top: '50%',
@@ -22,11 +22,11 @@ const useStyles = createStyles((theme) => ({
   sector: {
     fill: 'rgba(10, 14, 20, 0.92)',
     color: envy.cyan,
-    stroke: 'rgba(0, 229, 255, 0.28)',
+    stroke: envy.tealLineSoft,
     strokeWidth: 1,
 
     '&:hover': {
-      fill: 'rgba(0, 229, 255, 0.28)',
+      fill: envy.itemActive,
       cursor: 'pointer',
       '> g > text, > g > svg > path': {
         fill: envy.cyan,
@@ -38,20 +38,20 @@ const useStyles = createStyles((theme) => ({
     },
   },
   backgroundCircle: {
-    fill: 'rgba(6, 8, 12, 0.88)',
-    stroke: envy.cyan,
+    fill: 'rgba(6, 8, 10, 0.92)',
+    stroke: envy.silver,
     strokeWidth: 2,
-    filter: 'drop-shadow(0 0 10px rgba(0, 229, 255, 0.35))',
+    filter: `drop-shadow(0 0 10px ${envy.tealGlow})`,
   },
   centerCircle: {
-    fill: envy.cyan,
-    color: '#061014',
-    stroke: '#061014',
-    strokeWidth: 4,
-    filter: 'drop-shadow(0 0 10px rgba(0, 229, 255, 0.8))',
+    fill: envy.chromeMid,
+    color: '#0A0C0F',
+    stroke: envy.chromeLo,
+    strokeWidth: 3,
+    filter: `drop-shadow(0 0 8px ${envy.tealGlow})`,
     '&:hover': {
       cursor: 'pointer',
-      fill: theme.colors[theme.primaryColor][theme.fn.primaryShade() - 1] || envy.cyanSoft,
+      fill: envy.teal,
     },
   },
   centerIconContainer: {
@@ -62,7 +62,7 @@ const useStyles = createStyles((theme) => ({
     pointerEvents: 'none',
   },
   centerIcon: {
-    color: '#061014',
+    color: '#0A0C0F',
   },
 }));
 
