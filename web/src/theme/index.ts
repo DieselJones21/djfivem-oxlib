@@ -7,6 +7,12 @@ export const theme: MantineThemeOverride = {
   primaryColor: 'envy',
   primaryShade: 5,
   defaultRadius: 'md',
+  globalStyles: () => ({
+    'html, body, #root': {
+      background: 'transparent !important',
+      backgroundColor: 'transparent !important',
+    },
+  }),
   colors: {
     envy: [...envyPalette] as unknown as Tuple<string, 10>,
   },
@@ -64,6 +70,9 @@ export const theme: MantineThemeOverride = {
         },
         overlay: {
           background: 'rgba(0, 0, 0, 0.62)',
+        },
+        inner: {
+          background: 'transparent',
         },
       },
     },

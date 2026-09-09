@@ -32,12 +32,12 @@ export const envy = {
   radiusSm: 10,
   border: '1px solid rgba(0, 229, 255, 0.42)',
   borderStrong: '1px solid rgba(0, 229, 255, 0.78)',
-  glow: '0 0 22px rgba(0, 229, 255, 0.22)',
-  glowStrong: '0 0 28px rgba(0, 229, 255, 0.42)',
+  glow: '0 0 12px rgba(0, 229, 255, 0.18)',
+  glowStrong: '0 0 16px rgba(0, 229, 255, 0.32)',
   insetChrome:
-    'inset 0 1px 0 rgba(255, 255, 255, 0.16), inset 0 -1px 0 rgba(0, 0, 0, 0.45)',
+    'inset 0 1px 0 rgba(255, 255, 255, 0.12), inset 0 -1px 0 rgba(0, 0, 0, 0.4)',
   panelShadow:
-    '0 18px 48px rgba(0, 0, 0, 0.55), 0 0 24px rgba(0, 229, 255, 0.12), inset 0 1px 0 rgba(255, 255, 255, 0.12)',
+    '0 10px 24px rgba(0, 0, 0, 0.45), 0 0 0 1px rgba(0, 229, 255, 0.16)',
   headerGradient:
     'linear-gradient(180deg, rgba(36, 44, 54, 0.96) 0%, rgba(10, 13, 18, 0.98) 100%)',
   chromeGradient:
@@ -57,14 +57,13 @@ export const envyLabel = {
 };
 
 export const envyPanel = {
-  background: 'rgba(8, 10, 14, 0.82)',
+  background: 'rgba(8, 10, 14, 0.94)',
   border: envy.border,
   borderRadius: envy.radius,
   boxShadow: envy.panelShadow,
   position: 'relative' as const,
   overflow: 'hidden',
-  backdropFilter: 'blur(18px)',
-  WebkitBackdropFilter: 'blur(18px)',
+  backgroundClip: 'padding-box' as const,
 };
 
 export const envyItem = {
@@ -108,6 +107,9 @@ export const envyModalStyles = {
   },
   overlay: {
     background: 'rgba(0, 0, 0, 0.72)',
+  },
+  inner: {
+    background: 'transparent',
   },
   body: {
     padding: '8px 16px 16px',

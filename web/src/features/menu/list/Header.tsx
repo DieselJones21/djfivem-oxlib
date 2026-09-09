@@ -13,6 +13,8 @@ const useStyles = createStyles(() => ({
     gap: 4,
     background: envy.headerGradient,
     borderBottom: `1px solid rgba(0, 229, 255, 0.28)`,
+    borderTopLeftRadius: envy.radius,
+    borderTopRightRadius: envy.radius,
     position: 'relative',
     '&::after': {
       content: '""',

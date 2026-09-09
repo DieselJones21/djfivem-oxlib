@@ -21,9 +21,10 @@ const ScaleFade: React.FC<{
                     flexDirection: 'column',
                     minHeight: 0,
                     maxHeight: 'inherit',
-                    overflow: 'hidden',
+                    background: 'transparent',
+                    borderRadius: 'inherit',
                   }
-                : undefined
+                : { background: 'transparent' }
             }
           >
             {children}

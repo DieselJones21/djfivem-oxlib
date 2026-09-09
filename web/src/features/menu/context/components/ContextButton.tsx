@@ -1,4 +1,5 @@
 import { Button, createStyles, Group, HoverCard, Image, Progress, Stack, Text } from '@mantine/core';
+import React from 'react';
 import ReactMarkdown from 'react-markdown';
 import { ContextMenuProps, Option } from '../../../../typings';
 import { fetchNui } from '../../../../utils/fetchNui';
@@ -200,4 +201,4 @@ const ContextButton: React.FC<{
   );
 };
 
-export default ContextButton;
+export default React.memo(ContextButton);

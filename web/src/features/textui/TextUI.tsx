@@ -20,6 +20,7 @@ const useStyles = createStyles((_theme, params: { position?: TextUiPosition }) =
     justifyContent:
       params.position === 'right-center' ? 'flex-end' : params.position === 'left-center' ? 'flex-start' : 'center',
     pointerEvents: 'none',
+    background: 'transparent',
   },
   container: {
     fontSize: 15,

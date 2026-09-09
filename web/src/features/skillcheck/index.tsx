@@ -25,7 +25,8 @@ const useStyles = createStyles((_theme, params: { difficultyOffset: number }) =>
     r: 50,
     width: 500,
     height: 500,
-    filter: 'drop-shadow(0 0 18px rgba(0, 229, 255, 0.4))',
+    background: 'transparent',
+    overflow: 'visible',
   },
   track: {
     fill: 'transparent',

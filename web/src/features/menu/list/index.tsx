@@ -9,7 +9,7 @@ import type { MenuPosition, MenuSettings } from '../../../typings';
 import LibIcon from '../../../components/LibIcon';
 import { envy, envyPanel } from '../../../theme/envy';
 
-const useStyles = createStyles((_theme, params: { position?: MenuPosition; itemCount: number; selected: number }) => ({
+const useStyles = createStyles((_theme, params: { position?: MenuPosition }) => ({
   tooltip: {
     backgroundColor: envy.bgRaised,
     color: envy.text,
@@ -32,6 +32,7 @@ const useStyles = createStyles((_theme, params: { position?: MenuPosition; itemC
     bottom: params.position === 'bottom-left' || params.position === 'bottom-right' ? 1 : undefined,
     fontFamily: 'Roboto',
     width: 384,
+    backgroundClip: 'padding-box',
   },
   buttonsWrapper: {
     height: 'fit-content',
@@ -67,7 +68,7 @@ const ListMenu: React.FC = () => {
   const listRefs = useRef<Array<HTMLDivElement | null>>([]);
   const listScrollRef = useRef<HTMLDivElement>(null);
   const firstRenderRef = useRef(false);
-  const { classes } = useStyles({ position: menu.position, itemCount: menu.items.length, selected });
+  const { classes } = useStyles({ position: menu.position });
 
   const closeMenu = (ignoreFetch?: boolean, keyPressed?: string, forceClose?: boolean) => {
     if (menu.canClose === false && !forceClose) return;

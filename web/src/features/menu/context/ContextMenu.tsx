@@ -26,6 +26,8 @@ const useStyles = createStyles(() => ({
     display: 'flex',
     flexDirection: 'column',
     minHeight: 0,
+    background: 'transparent',
+    boxShadow: 'none',
   },
   panel: {
     ...envyPanel,

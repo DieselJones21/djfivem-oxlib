@@ -223,7 +223,7 @@ const Notifications: React.FC = () => {
     );
   });
 
-  return <Toaster />;
+  return <Toaster containerStyle={{ background: 'transparent', pointerEvents: 'none' }} />;
 };
 
 export default Notifications;

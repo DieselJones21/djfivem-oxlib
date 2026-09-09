@@ -16,7 +16,8 @@ const useStyles = createStyles((theme) => ({
     top: '50%',
     left: '50%',
     transform: 'translate(-50%, -50%)',
-    filter: 'drop-shadow(0 0 18px rgba(0, 229, 255, 0.28))',
+    background: 'transparent',
+    lineHeight: 0,
   },
   sector: {
     fill: 'rgba(10, 14, 20, 0.92)',
@@ -40,6 +41,7 @@ const useStyles = createStyles((theme) => ({
     fill: 'rgba(6, 8, 12, 0.88)',
     stroke: envy.cyan,
     strokeWidth: 2,
+    filter: 'drop-shadow(0 0 10px rgba(0, 229, 255, 0.35))',
   },
   centerCircle: {
     fill: envy.cyan,
@@ -153,7 +155,7 @@ const RadialMenu: React.FC = () => {
       >
         <ScaleFade visible={visible}>
           <svg
-            style={{ overflow: 'visible' }}
+            style={{ overflow: 'visible', background: 'transparent', display: 'block' }}
             width={`${newDimension}px`}
             height={`${newDimension}px`}
             viewBox="0 0 350 350"
