@@ -41,14 +41,14 @@ const useStyles = createStyles(() => ({
     fill: 'rgba(6, 8, 10, 0.92)',
     stroke: envy.silver,
     strokeWidth: 2,
-    filter: `drop-shadow(0 0 10px ${envy.tealGlow})`,
+    filter: 'none',
   },
   centerCircle: {
     fill: envy.chromeMid,
     color: '#0A0C0F',
     stroke: envy.chromeLo,
     strokeWidth: 3,
-    filter: `drop-shadow(0 0 8px ${envy.tealGlow})`,
+    filter: 'none',
     '&:hover': {
       cursor: 'pointer',
       fill: envy.teal,

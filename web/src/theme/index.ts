@@ -4,7 +4,7 @@ import { envy, envyPalette } from './envy';
 export const theme: MantineThemeOverride = {
   colorScheme: 'dark',
   fontFamily: 'Roboto, sans-serif',
-  primaryColor: 'envy',
+  primaryColor: 'rebel',
   primaryShade: 5,
   defaultRadius: 'md',
   globalStyles: () => ({
@@ -15,6 +15,7 @@ export const theme: MantineThemeOverride = {
   }),
   colors: {
     envy: [...envyPalette] as unknown as Tuple<string, 10>,
+    rebel: [...envyPalette] as unknown as Tuple<string, 10>,
   },
   shadows: {
     sm: envy.panelShadow,
@@ -266,7 +267,7 @@ export const theme: MantineThemeOverride = {
     RingProgress: {
       styles: {
         root: {
-          filter: `drop-shadow(0 0 10px ${envy.tealGlow})`,
+          filter: 'none',
         },
       },
     },
@@ -304,9 +305,10 @@ export const theme: MantineThemeOverride = {
           color: envy.text,
         },
         title: {
-          color: envy.cyan,
+          color: envy.chromeHi,
           fontWeight: 800,
-          letterSpacing: '0.12em',
+          letterSpacing: '0.18em',
+          fontStyle: 'italic',
           textTransform: 'uppercase',
         },
         overlay: {
@@ -318,7 +320,7 @@ export const theme: MantineThemeOverride = {
       styles: {
         root: {
           '&[data-variant="filled"]': {
-            boxShadow: envy.glow,
+            boxShadow: 'none',
           },
         },
       },

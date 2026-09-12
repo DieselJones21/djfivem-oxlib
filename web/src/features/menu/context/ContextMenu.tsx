@@ -9,6 +9,7 @@ import HeaderButton from './components/HeaderButton';
 import ScaleFade from '../../../transitions/ScaleFade';
 import MarkdownComponents from '../../../config/MarkdownComponents';
 import { envy, envyKicker, envyPanel } from '../../../theme/envy';
+import BrandMark from '../../../components/BrandMark';
 
 const openMenu = (id: string | undefined) => {
   fetchNui<ContextMenuProps>('openContext', { id: id, back: true });
@@ -56,8 +57,7 @@ const useStyles = createStyles(() => ({
       right: 12,
       bottom: 0,
       height: 1,
-      background: `linear-gradient(90deg, transparent, ${envy.cyan}, transparent)`,
-      boxShadow: `0 0 10px ${envy.tealGlow}`,
+      background: `linear-gradient(90deg, transparent, ${envy.silver}, transparent)`,
     },
   },
   titleBlock: {
@@ -76,35 +76,28 @@ const useStyles = createStyles(() => ({
     alignItems: 'center',
     gap: 8,
   },
-  crown: {
-    width: 9,
-    height: 9,
-    clipPath: 'polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%)',
-    background: envy.chromeGradient,
-    boxShadow: `0 0 8px ${envy.cyan}`,
-    flexShrink: 0,
-  },
   kicker: {
     ...envyKicker,
     fontSize: 10,
   },
   titleText: {
-    color: envy.text,
-    fontWeight: 750,
+    color: envy.chromeHi,
+    fontWeight: 800,
+    fontStyle: 'italic',
     fontSize: 18,
-    letterSpacing: '0.03em',
+    letterSpacing: '0.08em',
     textTransform: 'uppercase',
     lineHeight: 1.2,
   },
   countPill: {
     border: `1px solid ${envy.silver}`,
-    color: envy.teal,
+    color: envy.chromeHi,
     borderRadius: 999,
     fontSize: 10,
     fontWeight: 800,
     letterSpacing: '0.12em',
     padding: '4px 8px',
-    background: envy.tealFill,
+    background: 'rgba(255, 255, 255, 0.06)',
     whiteSpace: 'nowrap',
   },
   listShell: {
@@ -291,8 +284,8 @@ const ContextMenu: React.FC = () => {
             <Box className={classes.titleBlock}>
               <Box className={classes.kickerRow}>
                 <Box className={classes.brand}>
-                  <Box className={classes.crown} />
-                  <Text className={classes.kicker}>Context menu</Text>
+                  <BrandMark height={30} maxWidth={100} />
+                  <Text className={classes.kicker}>Roleplay</Text>
                 </Box>
                 <Text className={classes.countPill}>{itemCount} ITEMS</Text>
               </Box>

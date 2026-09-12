@@ -28,7 +28,7 @@ const useStyles = createStyles(() => ({
     letterSpacing: '0.08em',
     textTransform: 'uppercase',
     fontSize: 12,
-    textShadow: `0 0 10px ${envy.tealGlow}`,
+    textShadow: 'none',
   },
   description: {
     fontSize: 12,
@@ -140,7 +140,7 @@ const Notifications: React.FC = () => {
           iconColor = 'yellow.6';
           break;
         default:
-          iconColor = 'envy';
+          iconColor = 'rebel';
           break;
       }
     } else {

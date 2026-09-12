@@ -21,7 +21,7 @@ end
 
 RegisterNUICallback('getConfig', function(_, cb)
     cb({
-        primaryColor = GetConvar('ox:primaryColor', 'envy'),
+        primaryColor = GetConvar('ox:primaryColor', 'rebel'),
         primaryShade = GetConvarInt('ox:primaryShade', 5)
     })
 end)

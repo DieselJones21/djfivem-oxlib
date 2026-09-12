@@ -45,7 +45,7 @@ const useStyles = createStyles(() => ({
     fontWeight: 800,
     fontSize: 13,
     letterSpacing: '0.08em',
-    textShadow: `0 0 10px ${envy.tealGlow}`,
+    textShadow: 'none',
   },
   track: {
     width: '100%',
@@ -59,7 +59,7 @@ const useStyles = createStyles(() => ({
   bar: {
     height: '100%',
     background: `linear-gradient(90deg, ${envy.cyanDeep}, ${envy.cyanSoft})`,
-    boxShadow: `0 0 16px ${envy.tealGlow}`,
+    boxShadow: 'none',
     borderRadius: 999,
   },
 }));

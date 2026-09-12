@@ -5,11 +5,11 @@ games { 'rdr3', 'gta5' }
 rdr3_warning 'I acknowledge that this is a prerelease build of RedM, and I am aware my resources *will* become incompatible once RedM ships.'
 
 name 'ox_lib'
-author 'Overextended / Envy restyle'
+author 'Overextended / Rebel Roleplay restyle'
 version '3.39.0'
 license 'LGPL-3.0-or-later'
 repository 'https://github.com/DieselJones21/djfivem-oxlib'
-description 'ox_lib v3.39.0 with an Envy cyan-chrome UI restyle.'
+description 'ox_lib v3.39.0 with a Rebel Roleplay chrome, black, and red UI restyle.'
 
 dependencies {
     '/server:7290',

@@ -51,7 +51,7 @@ const useStyles = createStyles((_theme, params: { difficultyOffset: number }) =>
     cy: 250,
     strokeDasharray: circleCircumference,
     strokeDashoffset: circleCircumference - (Math.PI * 50 * params.difficultyOffset) / 180,
-    filter: `drop-shadow(0 0 8px ${envy.tealGlow})`,
+    filter: 'none',
     '@media (min-height: 1440px)': {
       strokeWidth: 10,
       r: 65,
@@ -107,7 +107,7 @@ const useStyles = createStyles((_theme, params: { difficultyOffset: number }) =>
     fontSize: 16,
     fontWeight: 800,
     lineHeight: 1,
-    textShadow: `0 0 10px ${envy.tealGlow}`,
+    textShadow: 'none',
     '@media (min-height: 1440px)': {
       fontSize: 22,
     },
