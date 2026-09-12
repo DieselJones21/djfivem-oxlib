@@ -34,7 +34,7 @@ const useStyles = createStyles((_theme, params: { position: 'middle' | 'bottom';
     justifyContent: 'center',
   },
   progress: {
-    filter: `drop-shadow(0 0 12px ${envy.tealGlow})`,
+    filter: 'none',
     '> svg > circle:nth-child(1)': {
       stroke: 'rgba(197, 205, 214, 0.22)',
     },
@@ -48,7 +48,7 @@ const useStyles = createStyles((_theme, params: { position: 'middle' | 'bottom';
   value: {
     textAlign: 'center',
     fontFamily: 'Roboto Mono',
-    textShadow: `0 0 12px ${envy.tealGlow}`,
+    textShadow: 'none',
     color: envy.cyan,
     fontWeight: 800,
   },

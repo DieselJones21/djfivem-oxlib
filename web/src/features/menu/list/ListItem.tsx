@@ -49,7 +49,7 @@ const useStyles = createStyles((_theme, params: { iconColor?: string }) => ({
   icon: {
     fontSize: 18,
     color: params.iconColor || envy.cyan,
-    filter: `drop-shadow(0 0 6px ${envy.tealGlow})`,
+    filter: 'none',
   },
   label: {
     color: envy.text,
@@ -148,7 +148,7 @@ const ListItem = forwardRef<Array<HTMLDivElement | null>, Props>(({ item, index,
             <Text className={classes.progressLabel}>{item.label}</Text>
             <Progress
               value={item.progress}
-              color={item.colorScheme || 'envy'}
+              color={item.colorScheme || 'rebel'}
               size="sm"
               radius="xl"
               styles={() => ({

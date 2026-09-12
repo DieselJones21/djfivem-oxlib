@@ -1,6 +1,6 @@
-# Envy ox_lib
+# Rebel Roleplay ox_lib
 
-Drop-in `ox_lib` **v3.39.0** with a custom Envy UI: black glass panels, electric cyan neon, and chrome edges.
+Drop-in `ox_lib` **v3.39.0** branded for Rebel Roleplay: black steel panels, chrome script, silver edges, and red accents from the server logo.
 
 This is a modified [Overextended ox_lib](https://github.com/overextended/ox_lib) v3.39.0 build (meets `ox_inventory`'s `3.36.4` requirement). Lua APIs stay the same, so existing menus, progress bars, notifications, and dialogs keep working.
 
@@ -15,14 +15,14 @@ This is a modified [Overextended ox_lib](https://github.com/overextended/ox_lib)
 ensure ox_lib
 ```
 
-Optional colour convars (defaults already point at the Envy palette):
+Optional colour convars (defaults already point at the Rebel palette):
 
 ```cfg
-setr ox:primaryColor envy
+setr ox:primaryColor rebel
 setr ox:primaryShade 5
 ```
 
-`envy` is a custom Mantine palette shipped in this build. Stock names such as `blue` still work if you want to override it.
+`rebel` is a custom Mantine palette shipped in this build (`envy` still maps to the same reds). Stock names such as `blue` still work if you want to override it.
 
 ## What changed in the UI
 

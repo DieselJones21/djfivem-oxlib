@@ -16,4 +16,4 @@ When incorporating this work into your own project, you must:
 
 ## Modifications
 
-This distribution is based on Overextended ox_lib **v3.39.0** and restyles the NUI (menus, notifications, progress, dialogs, radial, skill check, and TextUI) with an Envy cyan/chrome visual theme. Default `ox:primaryColor` is `envy`.
+This distribution is based on Overextended ox_lib **v3.39.0** and restyles the NUI (menus, notifications, progress, dialogs, radial, skill check, and TextUI) with a Rebel Roleplay chrome / black / red visual theme. Default `ox:primaryColor` is `rebel`.

@@ -1,12 +1,13 @@
 import { Box, createStyles, Text } from '@mantine/core';
 import React from 'react';
 import { envy, envyKicker } from '../../../theme/envy';
+import BrandMark from '../../../components/BrandMark';
 
 const useStyles = createStyles(() => ({
   container: {
     width: 384,
-    minHeight: 74,
-    padding: '12px 16px 14px',
+    minHeight: 86,
+    padding: '10px 14px 12px',
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'center',
@@ -22,9 +23,8 @@ const useStyles = createStyles(() => ({
       left: 16,
       right: 16,
       bottom: 0,
-      height: 2,
-      background: `linear-gradient(90deg, transparent, ${envy.cyan}, transparent)`,
-      boxShadow: `0 0 12px ${envy.tealGlow}`,
+      height: 1,
+      background: `linear-gradient(90deg, transparent, ${envy.silver}, transparent)`,
     },
   },
   kickerRow: {
@@ -36,27 +36,21 @@ const useStyles = createStyles(() => ({
   brand: {
     display: 'flex',
     alignItems: 'center',
-    gap: 8,
-  },
-  crown: {
-    width: 10,
-    height: 10,
-    clipPath: 'polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%)',
-    background: envy.chromeGradient,
-    boxShadow: `0 0 8px ${envy.cyan}`,
-    flexShrink: 0,
+    gap: 10,
+    minWidth: 0,
   },
   kicker: {
     ...envyKicker,
   },
   heading: {
-    fontSize: 22,
+    fontSize: 20,
     lineHeight: 1.15,
     fontWeight: 800,
-    color: envy.text,
+    fontStyle: 'italic',
+    color: envy.chromeHi,
     textTransform: 'uppercase',
-    letterSpacing: '0.04em',
-    textShadow: '0 2px 12px rgba(0, 0, 0, 0.45)',
+    letterSpacing: '0.08em',
+    textShadow: '0 2px 8px rgba(0, 0, 0, 0.45)',
   },
   badge: {
     minWidth: 34,
@@ -64,14 +58,13 @@ const useStyles = createStyles(() => ({
     padding: '0 8px',
     borderRadius: 999,
     border: `1px solid ${envy.silver}`,
-    color: envy.teal,
+    color: envy.chromeHi,
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
     fontSize: 12,
     fontWeight: 700,
-    boxShadow: envy.glow,
-    background: envy.tealFill,
+    background: 'rgba(255, 255, 255, 0.06)',
   },
 }));
 
@@ -82,8 +75,8 @@ const Header: React.FC<{ title: string; current?: number; total?: number }> = ({
     <Box className={classes.container}>
       <Box className={classes.kickerRow}>
         <Box className={classes.brand}>
-          <Box className={classes.crown} />
-          <Text className={classes.kicker}>Selection menu</Text>
+          <BrandMark height={32} maxWidth={108} />
+          <Text className={classes.kicker}>Roleplay</Text>
         </Box>
         {total != null && current != null && (
           <Box className={classes.badge}>

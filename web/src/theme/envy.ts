@@ -1,60 +1,60 @@
 export const envyPalette = [
-  '#E9FFF9',
-  '#BFEFE6',
-  '#8BDDD0',
-  '#55C9B8',
-  '#2BB8A6',
-  '#14B8A6',
-  '#0F9485',
-  '#0C766A',
-  '#085850',
-  '#053B36',
+  '#F8E8EB',
+  '#EFC3C9',
+  '#E08A94',
+  '#D25564',
+  '#C83345',
+  '#C41E3A',
+  '#9E1830',
+  '#7A1226',
+  '#560D1B',
+  '#360810',
 ] as const;
 
-const tealRgb = '20, 184, 166';
-const silverRgb = '210, 218, 226';
+const redRgb = '196, 30, 58';
+const silverRgb = '214, 220, 226';
 
 export const envy = {
-  teal: '#14B8A6',
-  tealSoft: '#5EEAD4',
-  tealDeep: '#0F766E',
-  cyan: '#14B8A6',
-  cyanSoft: '#5EEAD4',
-  cyanDeep: '#0F766E',
+  teal: '#C41E3A',
+  tealSoft: '#E25566',
+  tealDeep: '#7A1226',
+  cyan: '#C41E3A',
+  cyanSoft: '#E25566',
+  cyanDeep: '#7A1226',
   chromeHi: '#F7FAFC',
   chromeMid: '#C9D0D8',
   chromeLo: '#7A8590',
-  silver: '#C9D0D8',
+  silver: '#D6DCE2',
   text: '#F4F7FA',
   muted: '#A7B0B8',
-  danger: '#FF5C7A',
+  danger: '#C41E3A',
   success: '#3DFFC8',
   warning: '#FFD166',
-  bg: 'rgba(4, 6, 8, 0.96)',
-  bgRaised: 'rgba(8, 10, 12, 0.97)',
-  item: 'rgba(10, 12, 16, 0.94)',
-  itemHover: `rgba(${tealRgb}, 0.10)`,
-  itemActive: `rgba(${tealRgb}, 0.16)`,
-  radius: 14,
-  radiusSm: 10,
-  border: `1px solid rgba(${silverRgb}, 0.55)`,
-  borderTeal: `1px solid rgba(${tealRgb}, 0.62)`,
-  borderStrong: `1px solid rgba(${tealRgb}, 0.92)`,
-  glow: `0 0 12px rgba(${tealRgb}, 0.22)`,
-  glowStrong: `0 0 16px rgba(${tealRgb}, 0.36)`,
-  tealFill: `rgba(${tealRgb}, 0.10)`,
-  tealFillStrong: `rgba(${tealRgb}, 0.18)`,
-  tealLine: `rgba(${tealRgb}, 0.45)`,
-  tealLineSoft: `rgba(${tealRgb}, 0.22)`,
-  tealGlow: `rgba(${tealRgb}, 0.55)`,
-  silverLine: `rgba(${silverRgb}, 0.38)`,
+  bg: 'rgba(6, 6, 8, 0.96)',
+  bgRaised: 'rgba(10, 10, 12, 0.97)',
+  item: 'rgba(12, 12, 14, 0.94)',
+  itemHover: `rgba(${redRgb}, 0.10)`,
+  itemActive: `rgba(${redRgb}, 0.16)`,
+  radius: 12,
+  radiusSm: 8,
+  border: `1px solid rgba(${silverRgb}, 0.5)`,
+  borderTeal: `1px solid rgba(${redRgb}, 0.7)`,
+  borderStrong: `1px solid rgba(${silverRgb}, 0.92)`,
+  glow: `0 0 8px rgba(${redRgb}, 0.16)`,
+  glowStrong: `0 0 10px rgba(${redRgb}, 0.22)`,
+  tealFill: `rgba(${redRgb}, 0.10)`,
+  tealFillStrong: `rgba(${redRgb}, 0.16)`,
+  tealLine: `rgba(${redRgb}, 0.55)`,
+  tealLineSoft: `rgba(${redRgb}, 0.28)`,
+  tealGlow: `rgba(${redRgb}, 0.28)`,
+  silverLine: `rgba(${silverRgb}, 0.42)`,
   insetChrome:
-    'inset 0 1px 0 rgba(255, 255, 255, 0.22), inset 0 -1px 0 rgba(0, 0, 0, 0.55)',
-  panelShadow: `0 10px 24px rgba(0, 0, 0, 0.55), 0 0 0 1px rgba(${silverRgb}, 0.22)`,
+    'inset 0 1px 0 rgba(255, 255, 255, 0.28), inset 0 -1px 0 rgba(0, 0, 0, 0.6)',
+  panelShadow: `0 10px 22px rgba(0, 0, 0, 0.58), 0 0 0 1px rgba(${silverRgb}, 0.2)`,
   headerGradient:
-    'linear-gradient(180deg, rgba(232, 238, 244, 0.28) 0%, rgba(36, 42, 48, 0.96) 38%, rgba(6, 8, 10, 0.98) 100%)',
+    'linear-gradient(180deg, rgba(236, 240, 244, 0.22) 0%, rgba(28, 30, 34, 0.96) 36%, rgba(6, 6, 8, 0.98) 100%)',
   chromeGradient:
-    'linear-gradient(180deg, #FFFFFF 0%, #E6ECF2 20%, #AAB4BE 48%, #6A737C 58%, #D5DDE5 100%)',
+    'linear-gradient(180deg, #FFFFFF 0%, #E6ECF2 18%, #AAB4BE 48%, #6A737C 58%, #D5DDE5 100%)',
 };
 
 export const envyDropdown = {
@@ -70,7 +70,7 @@ export const envyLabel = {
 };
 
 export const envyPanel = {
-  background: 'rgba(6, 8, 10, 0.96)',
+  background: 'rgba(6, 6, 8, 0.96)',
   border: envy.border,
   borderRadius: envy.radius,
   boxShadow: envy.panelShadow,
@@ -88,12 +88,13 @@ export const envyItem = {
 };
 
 export const envyKicker = {
-  color: envy.teal,
+  color: envy.chromeHi,
   fontSize: 11,
-  fontWeight: 700,
-  letterSpacing: '0.22em',
+  fontWeight: 800,
+  letterSpacing: '0.28em',
+  fontStyle: 'italic' as const,
   textTransform: 'uppercase' as const,
-  textShadow: `0 0 12px ${envy.tealGlow}`,
+  textShadow: 'none',
 };
 
 export const envyModalStyles = {
@@ -114,7 +115,8 @@ export const envyModalStyles = {
   title: {
     color: envy.text,
     fontWeight: 800,
-    letterSpacing: '0.04em',
+    letterSpacing: '0.08em',
+    fontStyle: 'italic' as const,
     textTransform: 'uppercase' as const,
     width: '100%',
   },

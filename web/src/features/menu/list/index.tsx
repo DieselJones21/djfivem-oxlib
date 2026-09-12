@@ -51,7 +51,7 @@ const useStyles = createStyles((_theme, params: { position?: MenuPosition }) => 
   scrollArrowIcon: {
     color: envy.cyan,
     fontSize: 20,
-    filter: `drop-shadow(0 0 8px ${envy.tealGlow})`,
+    filter: 'none',
   },
 }));
 

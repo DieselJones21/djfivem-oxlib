@@ -20,7 +20,7 @@ export const debugContext = () => {
               description: 'See who is still hunting this name.',
               icon: 'shield-halved',
               progress: 64,
-              colorScheme: 'envy',
+              colorScheme: 'rebel',
             },
             {
               title: 'Radio Check',

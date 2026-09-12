@@ -23,7 +23,7 @@ const useStyles = createStyles((_theme, params: { canClose?: boolean }) => ({
     padding: 0,
     background: envy.tealFill,
     border: `1px solid ${envy.silver}`,
-    boxShadow: envy.glow,
+    boxShadow: 'none',
     '&:hover': {
       background: envy.itemHover,
     },

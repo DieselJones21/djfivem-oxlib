@@ -22,7 +22,7 @@ const SliderField: React.FC<Props> = (props) => {
       <Text sx={{ fontSize: 14, fontWeight: 600, color: envy.chromeMid, letterSpacing: '0.04em' }}>{props.row.label}</Text>
       <Slider
         mb={10}
-        color="envy"
+        color="rebel"
         value={controller.field.value}
         name={controller.field.name}
         ref={controller.field.ref}
