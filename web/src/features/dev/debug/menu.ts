@@ -14,7 +14,7 @@ export const debugMenu = () => {
               progress: 78,
               icon: 'bandage',
               description: 'Street meds with a clean wrap.',
-              colorScheme: 'rebel',
+              colorScheme: 'miami',
             },
             {
               label: 'Police Scanner',

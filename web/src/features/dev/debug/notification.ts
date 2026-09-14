@@ -8,7 +8,7 @@ export const debugCustomNotification = () => {
         action: 'notify',
         data: {
           title: 'UI Demo',
-          description: 'Rebel Roleplay chrome overlay is live.',
+          description: 'The 305 Miami overlay is live — palms, chrome, and ocean night.',
           type: 'inform',
           position: 'top-center',
           duration: 20000,

@@ -1,6 +1,6 @@
 import { Box, createStyles } from '@mantine/core';
 
-export const rebelLogoSrc = './images/rebel-logo.png';
+export const the305LogoSrc = './images/the-305-logo.png';
 
 const useStyles = createStyles(() => ({
   mark: {
@@ -13,14 +13,14 @@ const useStyles = createStyles(() => ({
   },
 }));
 
-const BrandMark: React.FC<{ height?: number; maxWidth?: number }> = ({ height = 34, maxWidth = 120 }) => {
+const BrandMark: React.FC<{ height?: number; maxWidth?: number }> = ({ height = 44, maxWidth = 140 }) => {
   const { classes } = useStyles();
 
   return (
     <Box
       component="img"
-      src={rebelLogoSrc}
-      alt="Rebel Roleplay"
+      src={the305LogoSrc}
+      alt="The 305"
       className={classes.mark}
       sx={{ height, maxWidth }}
     />

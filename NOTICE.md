@@ -16,4 +16,4 @@ When incorporating this work into your own project, you must:
 
 ## Modifications
 
-This distribution is based on Overextended ox_lib **v3.39.0** and restyles the NUI (menus, notifications, progress, dialogs, radial, skill check, and TextUI) with a Rebel Roleplay chrome / black / red visual theme. Default `ox:primaryColor` is `rebel`.
+This distribution is based on Overextended ox_lib **v3.39.0** and restyles the NUI (menus, notifications, progress, dialogs, radial, skill check, and TextUI) with a The 305 Miami night / chrome / hot-pink / aqua visual theme, including the server logo and palm-and-beach header details. Default `ox:primaryColor` is `miami`.

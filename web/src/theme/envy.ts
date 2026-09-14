@@ -1,60 +1,62 @@
 export const envyPalette = [
-  '#F8E8EB',
-  '#EFC3C9',
-  '#E08A94',
-  '#D25564',
-  '#C83345',
-  '#C41E3A',
-  '#9E1830',
-  '#7A1226',
-  '#560D1B',
-  '#360810',
+  '#FFE8F4',
+  '#FFB8DC',
+  '#FF7AC0',
+  '#FF4DA6',
+  '#FF2D8A',
+  '#E91E8C',
+  '#C4186A',
+  '#9A1254',
+  '#6E0D3C',
+  '#3A0820',
 ] as const;
 
-const redRgb = '196, 30, 58';
-const silverRgb = '214, 220, 226';
+const pinkRgb = '233, 30, 140';
+const aquaRgb = '46, 230, 214';
+const silverRgb = '214, 228, 236';
 
 export const envy = {
-  teal: '#C41E3A',
-  tealSoft: '#E25566',
-  tealDeep: '#7A1226',
-  cyan: '#C41E3A',
-  cyanSoft: '#E25566',
-  cyanDeep: '#7A1226',
-  chromeHi: '#F7FAFC',
-  chromeMid: '#C9D0D8',
-  chromeLo: '#7A8590',
-  silver: '#D6DCE2',
-  text: '#F4F7FA',
-  muted: '#A7B0B8',
-  danger: '#C41E3A',
-  success: '#3DFFC8',
+  teal: '#2EE6D6',
+  tealSoft: '#7AF3E8',
+  tealDeep: '#0E8F88',
+  cyan: '#E91E8C',
+  cyanSoft: '#FF4DA6',
+  cyanDeep: '#C4186A',
+  chromeHi: '#F4FBFF',
+  chromeMid: '#C5D8E4',
+  chromeLo: '#7A93A4',
+  silver: '#D6E4EC',
+  text: '#F4FBFF',
+  muted: '#9BB0BE',
+  danger: '#E91E8C',
+  success: '#2EE6D6',
   warning: '#FFD166',
-  bg: 'rgba(6, 6, 8, 0.96)',
-  bgRaised: 'rgba(10, 10, 12, 0.97)',
-  item: 'rgba(12, 12, 14, 0.94)',
-  itemHover: `rgba(${redRgb}, 0.10)`,
-  itemActive: `rgba(${redRgb}, 0.16)`,
+  bg: 'rgba(4, 8, 16, 0.96)',
+  bgRaised: 'rgba(8, 12, 22, 0.97)',
+  item: 'rgba(10, 16, 28, 0.94)',
+  itemHover: `rgba(${pinkRgb}, 0.12)`,
+  itemActive: `rgba(${pinkRgb}, 0.18)`,
   radius: 12,
   radiusSm: 8,
-  border: `1px solid rgba(${silverRgb}, 0.5)`,
-  borderTeal: `1px solid rgba(${redRgb}, 0.7)`,
-  borderStrong: `1px solid rgba(${silverRgb}, 0.92)`,
-  glow: `0 0 8px rgba(${redRgb}, 0.16)`,
-  glowStrong: `0 0 10px rgba(${redRgb}, 0.22)`,
-  tealFill: `rgba(${redRgb}, 0.10)`,
-  tealFillStrong: `rgba(${redRgb}, 0.16)`,
-  tealLine: `rgba(${redRgb}, 0.55)`,
-  tealLineSoft: `rgba(${redRgb}, 0.28)`,
-  tealGlow: `rgba(${redRgb}, 0.28)`,
+  border: `1px solid rgba(${silverRgb}, 0.42)`,
+  borderTeal: `1px solid rgba(${aquaRgb}, 0.55)`,
+  borderStrong: `1px solid rgba(${pinkRgb}, 0.7)`,
+  glow: `0 0 8px rgba(${pinkRgb}, 0.16)`,
+  glowStrong: `0 0 10px rgba(${pinkRgb}, 0.22)`,
+  tealFill: `rgba(${aquaRgb}, 0.10)`,
+  tealFillStrong: `rgba(${aquaRgb}, 0.16)`,
+  tealLine: `rgba(${aquaRgb}, 0.55)`,
+  tealLineSoft: `rgba(${aquaRgb}, 0.28)`,
+  tealGlow: `rgba(${aquaRgb}, 0.28)`,
   silverLine: `rgba(${silverRgb}, 0.42)`,
   insetChrome:
-    'inset 0 1px 0 rgba(255, 255, 255, 0.28), inset 0 -1px 0 rgba(0, 0, 0, 0.6)',
-  panelShadow: `0 10px 22px rgba(0, 0, 0, 0.58), 0 0 0 1px rgba(${silverRgb}, 0.2)`,
+    'inset 0 1px 0 rgba(255, 255, 255, 0.22), inset 0 -1px 0 rgba(0, 0, 0, 0.55)',
+  panelShadow: `0 10px 22px rgba(0, 0, 0, 0.58), 0 0 0 1px rgba(${silverRgb}, 0.16)`,
   headerGradient:
-    'linear-gradient(180deg, rgba(236, 240, 244, 0.22) 0%, rgba(28, 30, 34, 0.96) 36%, rgba(6, 6, 8, 0.98) 100%)',
+    'linear-gradient(180deg, rgba(255, 90, 160, 0.28) 0%, rgba(46, 230, 214, 0.10) 26%, rgba(10, 16, 32, 0.96) 58%, rgba(4, 8, 16, 0.98) 100%)',
   chromeGradient:
-    'linear-gradient(180deg, #FFFFFF 0%, #E6ECF2 18%, #AAB4BE 48%, #6A737C 58%, #D5DDE5 100%)',
+    'linear-gradient(180deg, #FFFFFF 0%, #E6F4FC 18%, #A8C0D0 48%, #6A808C 58%, #D5E8F0 100%)',
+  beachGradient: `linear-gradient(90deg, ${'#C4186A'}, ${'#FF2D8A'} 48%, ${'#2EE6D6'})`,
 };
 
 export const envyDropdown = {
@@ -69,8 +71,16 @@ export const envyLabel = {
   letterSpacing: '0.04em' as const,
 };
 
+const palmMark = encodeURIComponent(
+  `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 72 96"><g fill="%23E91E8C"><path d="M38.2 94c-.6-16.8-1.8-34.4 1.6-51.2.8-4 2.4-8.6 3.8-12.2.4 6.6-1.2 18.4-2.4 30.4-.8 8.4-1.6 21.2-3 33z"/><path d="M43.4 29.2C28 24.4 12.6 32.6 8 44.8c12.2-7.4 24.8-10.6 35.4-15.6z"/><path d="M43.2 27.6C32.4 16.2 24.8 6.4 28.6 2.2c6.6 8.8 11.8 16.8 14.6 25.4z"/><path d="M44.2 27.2c2.4-14.6 8.2-24.8 16.4-26.6-1.8 10.4-6.2 19.2-16.4 26.6z"/><path d="M44.6 29.6c14.8-2.2 26.4 3.6 31.2 14.2-11.6-6-21.8-9.4-31.2-14.2z"/><path d="M43.8 32.2c12.6 6.4 18.8 16.8 18.2 27.8-10.4-9.2-15.8-16.6-18.2-27.8z"/><path d="M41.6 31.4C29.4 38 20.2 48.6 18.8 60.4c8.8-10.2 16.4-18.4 22.8-29z"/></g></svg>`
+);
+
 export const envyPanel = {
-  background: 'rgba(6, 6, 8, 0.96)',
+  backgroundColor: 'rgba(4, 8, 16, 0.96)',
+  backgroundImage: `url("data:image/svg+xml,${palmMark}"), url("data:image/svg+xml,${palmMark}")`,
+  backgroundRepeat: 'no-repeat',
+  backgroundPosition: 'left -14px bottom -6px, right -18px bottom -8px',
+  backgroundSize: '78px 104px, 68px 92px',
   border: envy.border,
   borderRadius: envy.radius,
   boxShadow: envy.panelShadow,
@@ -88,13 +98,21 @@ export const envyItem = {
 };
 
 export const envyKicker = {
-  color: envy.chromeHi,
+  color: envy.tealSoft,
   fontSize: 11,
   fontWeight: 800,
   letterSpacing: '0.28em',
   fontStyle: 'italic' as const,
   textTransform: 'uppercase' as const,
   textShadow: 'none',
+};
+
+export const envyHeaderSurface = {
+  backgroundImage: `url("data:image/svg+xml,${palmMark}"), url("data:image/svg+xml,${palmMark}"), ${envy.headerGradient}`,
+  backgroundRepeat: 'no-repeat',
+  backgroundPosition: 'left -12px bottom 0, right -14px bottom 0, 0 0',
+  backgroundSize: '58px 78px, 52px 70px, 100% 100%',
+  overflow: 'hidden' as const,
 };
 
 export const envyModalStyles = {
@@ -107,7 +125,7 @@ export const envyModalStyles = {
     overflow: 'hidden',
   },
   header: {
-    background: envy.headerGradient,
+    ...envyHeaderSurface,
     borderBottom: `1px solid ${envy.silverLine}`,
     marginBottom: 12,
     padding: '14px 16px',

@@ -10,12 +10,13 @@ import ScaleFade from '../../../transitions/ScaleFade';
 import MarkdownComponents from '../../../config/MarkdownComponents';
 import { envy, envyKicker, envyPanel } from '../../../theme/envy';
 import BrandMark from '../../../components/BrandMark';
+import MiamiDecor from '../../../components/MiamiDecor';
 
 const openMenu = (id: string | undefined) => {
   fetchNui<ContextMenuProps>('openContext', { id: id, back: true });
 };
 
-const HEADER_RESERVE = 112;
+const HEADER_RESERVE = 130;
 
 const useStyles = createStyles(() => ({
   container: {
@@ -50,15 +51,7 @@ const useStyles = createStyles(() => ({
     border: `1px solid ${envy.silverLine}`,
     position: 'relative',
     flexShrink: 0,
-    '&::after': {
-      content: '""',
-      position: 'absolute',
-      left: 12,
-      right: 12,
-      bottom: 0,
-      height: 1,
-      background: `linear-gradient(90deg, transparent, ${envy.silver}, transparent)`,
-    },
+    overflow: 'hidden',
   },
   titleBlock: {
     flex: 1,
@@ -278,14 +271,17 @@ const ContextMenu: React.FC = () => {
           }}
         >
           <Flex className={classes.header}>
+            <MiamiDecor compact />
             {contextMenu.menu && (
-              <HeaderButton icon="chevron-left" iconSize={16} handleClick={() => openMenu(contextMenu.menu)} />
+              <Box sx={{ position: 'relative', zIndex: 1 }}>
+                <HeaderButton icon="chevron-left" iconSize={16} handleClick={() => openMenu(contextMenu.menu)} />
+              </Box>
             )}
-            <Box className={classes.titleBlock}>
+            <Box className={classes.titleBlock} sx={{ position: 'relative', zIndex: 1 }}>
               <Box className={classes.kickerRow}>
                 <Box className={classes.brand}>
-                  <BrandMark height={30} maxWidth={100} />
-                  <Text className={classes.kicker}>Roleplay</Text>
+                  <BrandMark height={42} maxWidth={130} />
+                  <Text className={classes.kicker}>Miami</Text>
                 </Box>
                 <Text className={classes.countPill}>{itemCount} ITEMS</Text>
               </Box>
@@ -293,7 +289,9 @@ const ContextMenu: React.FC = () => {
                 <ReactMarkdown components={MarkdownComponents}>{contextMenu.title}</ReactMarkdown>
               </Text>
             </Box>
-            <HeaderButton icon="xmark" canClose={contextMenu.canClose} iconSize={18} handleClick={closeContext} />
+            <Box sx={{ position: 'relative', zIndex: 1 }}>
+              <HeaderButton icon="xmark" canClose={contextMenu.canClose} iconSize={18} handleClick={closeContext} />
+            </Box>
           </Flex>
           <Box className={classes.listShell}>
             <Box

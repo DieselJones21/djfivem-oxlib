@@ -1,6 +1,6 @@
-# Rebel Roleplay ox_lib
+# The 305 ox_lib
 
-Drop-in `ox_lib` **v3.39.0** branded for Rebel Roleplay: black steel panels, chrome script, silver edges, and red accents from the server logo.
+Drop-in `ox_lib` **v3.39.0** branded for The 305: Miami night panels, chrome script, hot-pink metal, aqua ocean, and palm/beach details from the server logo.
 
 This is a modified [Overextended ox_lib](https://github.com/overextended/ox_lib) v3.39.0 build (meets `ox_inventory`'s `3.36.4` requirement). Lua APIs stay the same, so existing menus, progress bars, notifications, and dialogs keep working.
 
@@ -15,14 +15,14 @@ This is a modified [Overextended ox_lib](https://github.com/overextended/ox_lib)
 ensure ox_lib
 ```
 
-Optional colour convars (defaults already point at the Rebel palette):
+Optional colour convars (defaults already point at the Miami palette):
 
 ```cfg
-setr ox:primaryColor rebel
+setr ox:primaryColor miami
 setr ox:primaryShade 5
 ```
 
-`rebel` is a custom Mantine palette shipped in this build (`envy` still maps to the same reds). Stock names such as `blue` still work if you want to override it.
+`miami` is a custom Mantine palette shipped in this build (`envy` and `rebel` still map to the same pinks). Stock names such as `blue` still work if you want to override it.
 
 ## What changed in the UI
 
