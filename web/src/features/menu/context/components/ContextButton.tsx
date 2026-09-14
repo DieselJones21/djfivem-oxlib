@@ -150,7 +150,7 @@ const ContextButton: React.FC<{
                   </Text>
                 )}
                 {button.progress !== undefined && (
-                  <Progress value={button.progress} size="sm" color={button.colorScheme || 'rebel'} radius="xl" />
+                  <Progress value={button.progress} size="sm" color={button.colorScheme || 'miami'} radius="xl" />
                 )}
               </Stack>
               {(button.menu || button.arrow) && button.arrow !== false && (
@@ -178,7 +178,7 @@ const ContextButton: React.FC<{
                     <Progress
                       value={metadata.progress}
                       size="sm"
-                      color={metadata.colorScheme || button.colorScheme || 'rebel'}
+                      color={metadata.colorScheme || button.colorScheme || 'miami'}
                       radius="xl"
                     />
                   )}

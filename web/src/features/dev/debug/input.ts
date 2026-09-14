@@ -58,7 +58,7 @@ export const debugInput = () => {
           {
             type: 'color',
             label: 'Accent colour',
-            default: '#C41E3A',
+            default: '#E91E8C',
           },
           {
             type: 'date',

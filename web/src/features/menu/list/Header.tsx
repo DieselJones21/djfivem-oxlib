@@ -2,11 +2,12 @@ import { Box, createStyles, Text } from '@mantine/core';
 import React from 'react';
 import { envy, envyKicker } from '../../../theme/envy';
 import BrandMark from '../../../components/BrandMark';
+import MiamiDecor from '../../../components/MiamiDecor';
 
 const useStyles = createStyles(() => ({
   container: {
     width: 384,
-    minHeight: 86,
+    minHeight: 102,
     padding: '10px 14px 12px',
     display: 'flex',
     flexDirection: 'column',
@@ -17,15 +18,8 @@ const useStyles = createStyles(() => ({
     borderTopLeftRadius: envy.radius,
     borderTopRightRadius: envy.radius,
     position: 'relative',
-    '&::after': {
-      content: '""',
-      position: 'absolute',
-      left: 16,
-      right: 16,
-      bottom: 0,
-      height: 1,
-      background: `linear-gradient(90deg, transparent, ${envy.silver}, transparent)`,
-    },
+    overflow: 'hidden',
+    zIndex: 1,
   },
   kickerRow: {
     display: 'flex',
@@ -38,6 +32,8 @@ const useStyles = createStyles(() => ({
     alignItems: 'center',
     gap: 10,
     minWidth: 0,
+    position: 'relative',
+    zIndex: 1,
   },
   kicker: {
     ...envyKicker,
@@ -51,6 +47,8 @@ const useStyles = createStyles(() => ({
     textTransform: 'uppercase',
     letterSpacing: '0.08em',
     textShadow: '0 2px 8px rgba(0, 0, 0, 0.45)',
+    position: 'relative',
+    zIndex: 1,
   },
   badge: {
     minWidth: 34,
@@ -65,6 +63,8 @@ const useStyles = createStyles(() => ({
     fontSize: 12,
     fontWeight: 700,
     background: 'rgba(255, 255, 255, 0.06)',
+    position: 'relative',
+    zIndex: 1,
   },
 }));
 
@@ -73,10 +73,11 @@ const Header: React.FC<{ title: string; current?: number; total?: number }> = ({
 
   return (
     <Box className={classes.container}>
+      <MiamiDecor />
       <Box className={classes.kickerRow}>
         <Box className={classes.brand}>
-          <BrandMark height={32} maxWidth={108} />
-          <Text className={classes.kicker}>Roleplay</Text>
+          <BrandMark height={48} maxWidth={150} />
+          <Text className={classes.kicker}>Miami</Text>
         </Box>
         {total != null && current != null && (
           <Box className={classes.badge}>

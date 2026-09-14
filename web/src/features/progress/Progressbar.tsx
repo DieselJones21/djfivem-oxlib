@@ -58,7 +58,7 @@ const useStyles = createStyles(() => ({
   },
   bar: {
     height: '100%',
-    background: `linear-gradient(90deg, ${envy.cyanDeep}, ${envy.cyanSoft})`,
+    background: envy.beachGradient,
     boxShadow: 'none',
     borderRadius: 999,
   },

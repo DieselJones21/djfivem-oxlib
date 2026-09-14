@@ -22,7 +22,7 @@ const Dev: React.FC = () => {
           onClick={() => setOpened(true)}
           radius="xl"
           variant="filled"
-          color="rebel"
+          color="miami"
           sx={{ position: 'absolute', bottom: 0, right: 0, width: 50, height: 50, zIndex: 10000 }}
           size="xl"
           mr={50}
@@ -36,14 +36,14 @@ const Dev: React.FC = () => {
         position="left"
         onClose={() => setOpened(false)}
         opened={opened}
-        title="Rebel preview"
+        title="The 305 preview"
         padding="xl"
         overlayOpacity={0.55}
       >
         <Stack>
           <Divider />
           <Button fullWidth onClick={() => debugEnvyShowcase()}>
-            Open Rebel showcase
+            Open Miami showcase
           </Button>
           <Button fullWidth onClick={() => debugInput()}>
             Open input dialog

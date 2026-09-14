@@ -8,6 +8,7 @@ import type { TextUiPosition, TextUiProps } from '../../typings';
 import MarkdownComponents from '../../config/MarkdownComponents';
 import LibIcon from '../../components/LibIcon';
 import { envy, envyItem } from '../../theme/envy';
+import MiamiDecor from '../../components/MiamiDecor';
 
 const useStyles = createStyles((_theme, params: { position?: TextUiPosition }) => ({
   wrapper: {
@@ -24,7 +25,7 @@ const useStyles = createStyles((_theme, params: { position?: TextUiPosition }) =
   },
   container: {
     fontSize: 15,
-    padding: '10px 14px',
+    padding: '12px 16px 14px',
     margin: 8,
     marginTop: params.position === 'top-center' ? 24 : 8,
     ...envyItem,
@@ -34,6 +35,8 @@ const useStyles = createStyles((_theme, params: { position?: TextUiPosition }) =
     boxShadow: envy.panelShadow,
     maxWidth: 420,
     pointerEvents: 'auto',
+    position: 'relative',
+    overflow: 'hidden',
   },
   iconWrap: {
     width: 32,
@@ -75,7 +78,8 @@ const TextUI: React.FC = () => {
       <Box className={classes.wrapper}>
         <ScaleFade visible={visible}>
           <Box style={data.style} className={classes.container}>
-            <Group spacing={12} noWrap>
+            <MiamiDecor compact />
+            <Group spacing={12} noWrap sx={{ position: 'relative', zIndex: 1 }}>
               {data.icon && (
                 <Box className={classes.iconWrap}>
                   <LibIcon

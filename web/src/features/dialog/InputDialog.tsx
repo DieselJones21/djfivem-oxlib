@@ -186,7 +186,7 @@ const InputDialog: React.FC = () => {
               >
                 {locale.ui.cancel}
               </Button>
-              <Button uppercase variant="filled" color="rebel" type="submit">
+              <Button uppercase variant="filled" color="miami" type="submit">
                 {locale.ui.confirm}
               </Button>
             </Group>

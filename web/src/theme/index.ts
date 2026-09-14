@@ -1,10 +1,10 @@
 import { MantineThemeOverride, Tuple } from '@mantine/core';
-import { envy, envyPalette } from './envy';
+import { envy, envyHeaderSurface, envyPalette } from './envy';
 
 export const theme: MantineThemeOverride = {
   colorScheme: 'dark',
   fontFamily: 'Roboto, sans-serif',
-  primaryColor: 'rebel',
+  primaryColor: 'miami',
   primaryShade: 5,
   defaultRadius: 'md',
   globalStyles: () => ({
@@ -16,6 +16,7 @@ export const theme: MantineThemeOverride = {
   colors: {
     envy: [...envyPalette] as unknown as Tuple<string, 10>,
     rebel: [...envyPalette] as unknown as Tuple<string, 10>,
+    miami: [...envyPalette] as unknown as Tuple<string, 10>,
   },
   shadows: {
     sm: envy.panelShadow,
@@ -57,7 +58,7 @@ export const theme: MantineThemeOverride = {
           color: envy.text,
         },
         header: {
-          background: envy.headerGradient,
+          ...envyHeaderSurface,
           borderBottom: `1px solid ${envy.silverLine}`,
           marginBottom: 12,
           padding: '14px 16px',
@@ -241,7 +242,7 @@ export const theme: MantineThemeOverride = {
       styles: {
         track: { background: 'rgba(255, 255, 255, 0.08)' },
         bar: {
-          background: `linear-gradient(90deg, ${envy.cyanDeep}, ${envy.cyan})`,
+          background: envy.beachGradient,
           boxShadow: envy.glow,
         },
         thumb: {
@@ -259,7 +260,7 @@ export const theme: MantineThemeOverride = {
           overflow: 'hidden',
         },
         bar: {
-          background: `linear-gradient(90deg, ${envy.cyanDeep}, ${envy.cyanSoft})`,
+          background: envy.beachGradient,
           boxShadow: envy.glowStrong,
         },
       },

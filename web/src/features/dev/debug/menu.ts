@@ -7,14 +7,14 @@ export const debugMenu = () => {
       {
         action: 'setMenu',
         data: {
-          title: 'Street Market',
+          title: 'South Beach',
           items: [
             {
               label: 'Bandage Roll',
               progress: 78,
               icon: 'bandage',
               description: 'Street meds with a clean wrap.',
-              colorScheme: 'rebel',
+              colorScheme: 'miami',
             },
             {
               label: 'Police Scanner',

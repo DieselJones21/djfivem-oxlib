@@ -7,7 +7,7 @@ export const debugTextUI = () => {
       {
         action: 'textUi',
         data: {
-          text: 'UI Demo  \n Rebel Roleplay — chrome script, black steel, red cut.',
+          text: 'UI Demo  \n The 305 — Miami night, chrome script, pink + aqua.',
           position: 'top-center',
           icon: 'circle-info',
         },

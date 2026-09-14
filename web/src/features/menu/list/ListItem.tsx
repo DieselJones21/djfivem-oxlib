@@ -148,7 +148,7 @@ const ListItem = forwardRef<Array<HTMLDivElement | null>, Props>(({ item, index,
             <Text className={classes.progressLabel}>{item.label}</Text>
             <Progress
               value={item.progress}
-              color={item.colorScheme || 'rebel'}
+              color={item.colorScheme || 'miami'}
               size="sm"
               radius="xl"
               styles={() => ({
