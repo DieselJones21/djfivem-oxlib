@@ -7,7 +7,7 @@ export const debugProgressbar = () => {
       {
         action: 'progress',
         data: {
-          label: 'Cruising Ocean Drive',
+          label: 'Running layered ox_lib preview',
           duration: 30000,
         },
       },

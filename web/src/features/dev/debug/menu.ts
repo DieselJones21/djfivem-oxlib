@@ -7,7 +7,7 @@ export const debugMenu = () => {
       {
         action: 'setMenu',
         data: {
-          title: 'South Beach',
+          title: 'Street Market',
           items: [
             {
               label: 'Bandage Roll',

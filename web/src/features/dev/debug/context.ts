@@ -7,7 +7,7 @@ export const debugContext = () => {
       {
         action: 'showContext',
         data: {
-          title: 'Ocean Drive',
+          title: 'Street Actions',
           options: [
             {
               title: 'Call Taxi',
